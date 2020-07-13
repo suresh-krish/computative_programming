@@ -6,9 +6,12 @@
 
 
 def fun_isfactor(f, n):
-	def fun_isfactor(f, n):
-	    if n == 0:
-		    return True
-	    elif n % f == 0 :
-		    return True
-	    return False
+	if n == 0:
+		return True
+	elif f == 0:
+		return False
+	elif n % f == 0 :
+		return True
+	else :
+		
+		return False
