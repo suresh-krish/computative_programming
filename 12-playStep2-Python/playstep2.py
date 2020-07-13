@@ -29,5 +29,40 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+	l = str(hand)
+	lis = list(l)
+	n = str(dice)
+	d = list(n)
+	h = ""
+	if lis[1] == lis[2]:
+		h = lis[1] + lis[2]
+		if int(d[-1]) > int(lis[1]):
+			h = d[-1] + h
+		else:
+		    h = h + d[-1]
+		d.pop()
+		r = ""
+		for i in d:
+			r = r + 1
+		res = tuple(int(h),r)
+		return res
+	else :
+		h = lis[0]
+		h = h + d[-1]
+		h = h + lis[1]
+		x = []
+		for i in h:
+			x.append(int(i))
+		x.sort(reverse = True)
+		d.pop()
+		q = ""
+		for i in d:
+			q = q + 1
+		for i in x:
+			r = str(i)
+		return int(r), q
+
+
+
+
+
