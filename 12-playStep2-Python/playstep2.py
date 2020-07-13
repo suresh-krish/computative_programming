@@ -44,7 +44,7 @@ def playstep2(hand, dice):
 		r = ""
 		for i in d:
 			r = r + i
-		res = tuple(int(h),r)
+		res = (int(h),int(r))
 		return res
 	else :
 		h = lis[0]
