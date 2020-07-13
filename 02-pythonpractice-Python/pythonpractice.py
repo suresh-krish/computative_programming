@@ -18,3 +18,24 @@ Use the test cases below to guide you!"""
 class Classy(object):
     def __init__(self):
         self.items = []
+
+    def addItem(self,x):
+        self.items.append(x)
+        # print(items)
+
+    def classiness(self):
+        sum = 0
+        # print(items)
+        for i in self.items:
+            if i == "tophat":
+                sum = sum + 2
+            elif i == "bowtie":
+                sum = sum + 4
+            elif i == "monocle":
+                sum = sum + 5
+            else :
+                sum = sum
+        return sum
+
+
+
