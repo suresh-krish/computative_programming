@@ -57,7 +57,7 @@ def playstep2(hand, dice):
 		d.pop()
 		q = ""
 		for i in d:
-			q = q + 1
+			q = q + i
 		for i in x:
 			r = str(i)
 		return int(r), q
