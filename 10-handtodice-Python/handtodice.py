@@ -7,4 +7,9 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	h = str(hand)
+	l = []
+	for i in h:
+		l.append(int(i))
+		k = tuple(l)
+	return k
