@@ -12,5 +12,14 @@
 # min(a,b,c) to find the smallest.
 
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	pass
+	l = []
+	l.append(a)
+	l.append(b)
+	l.append(c)
+	l.sort(reverse = True)
+	sum = ""
+	for i in l:
+		sum = sum + str(i)
+
+	return int(sum)
+
