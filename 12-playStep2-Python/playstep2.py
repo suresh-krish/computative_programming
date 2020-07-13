@@ -47,20 +47,22 @@ def playstep2(hand, dice):
 		res = (int(h),int(r))
 		return res
 	else :
+		j = ""
 		h = lis[0]
 		h = h + d[-1]
-		h = h + lis[1]
+		h = h + d[-2]
 		x = []
 		for i in h:
 			x.append(int(i))
 		x.sort(reverse = True)
 		d.pop()
+		d.pop()
 		q = ""
 		for i in d:
 			q = q + i
 		for i in x:
-			r = str(i)
-		return int(r), q
+			j = j + str(i)
+		return int(j), int(q)
 
 
 
