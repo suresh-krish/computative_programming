@@ -43,7 +43,7 @@ def playstep2(hand, dice):
 		d.pop()
 		r = ""
 		for i in d:
-			r = r + 1
+			r = r + i
 		res = tuple(int(h),r)
 		return res
 	else :
