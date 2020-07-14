@@ -10,6 +10,6 @@ def fun_get_kth_digit(digit, k):
 	lis = list(dig)
 	lis1 = lis[::-1]
 	try:
-		return lis1[k]
+		return int(lis1[k])
 	except:
 		return 0
