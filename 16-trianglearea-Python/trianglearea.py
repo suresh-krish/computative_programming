@@ -11,3 +11,4 @@ def trianglearea(s1, s2, s3):
 	s = s / 2
 	a = s*(s -s1)*(s-s2)*(s-s3)
 	a = math.sqrt(a)
+	return a
