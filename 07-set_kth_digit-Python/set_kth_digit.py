@@ -12,7 +12,9 @@ def fun_set_kth_digit(n, k, d):
 		flag = 1
 	l = str(n)
 	lis = list(l)
-	if len(lis) < int(d):
+	if lis[0] == "-":
+		lis.pop(0)
+	if len(lis) <= int(k):
 		lis.append(str(d))
 
 	list1 = lis[::-1]
