@@ -31,12 +31,14 @@ Asian City - Country
 Asian City - Country"""
 
 locations = {'North America': {'USA': ["Atlanta",'Mountain View']} ,"Asia" : {"China" : ["Shanghai"] ,"India":["Banglore"]}, "Africa" :{"Egypt":["Cairo"]}}
-countries = {"Asia" : ["China","India"],"Africa" : "Egypt" , 'North America': 'USA'}
-cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : ["Atlanta",'Mountain View']}
+# countries = {"Asia" : ["China","India"],"Africa" : "Egypt" , 'North America': 'USA'}
+# cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : ["Atlanta",'Mountain View']}
 def sortUSA():
+    a = 1
+    print(a)
     print(locations["North America"]["USA"])
-    # for i in locations["North America"]["USA"]:
-    #     print(i)
+    for i in locations["North America"]["USA"]:
+        print(i)
 
                 
 
