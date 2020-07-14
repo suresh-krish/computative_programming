@@ -42,8 +42,20 @@ class stack(object):
 
     def push(self, new_element):
         "Push (add) a new element onto the top of the stack"
+        # last_node = Element(self,new_element)
+        current = self.ll
+        if self.ll:
+            while current.top:
+                # top = current
+                current = current.top
+            current.top = new_element
+        else:
+            self.ll = new_element
         
     def pop(self):
         "Pop (remove) the first element off the top of the stack and return it"
-        pass
+        up = self.ll
+        while self.up.top.top == None:
+            current.top = up.top
+        
     
