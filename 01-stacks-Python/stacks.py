@@ -51,7 +51,7 @@ class stack(object):
     def pop(self):
         "Pop (remove) the first element off the next of the stack and return it"
         a = self.ll.delete_first()
-        
+        return a
 
 
     
