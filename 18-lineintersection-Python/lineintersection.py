@@ -6,10 +6,17 @@
 
 def lineintersection(m1, b1, m2, b2):
 	a = (b2 - b1) 
-	a1 = a/ (m1 - m2)
-	b = (b1*m2 - b2*m1) / (m2 - m1)
 	if a == 0:
 		return None
+	elif m1-m2 ==0 :
+		return None
+	else:
+	    a1 = a/ (m1 - m2)
+
+	if m2 - m1 < 0:
+		return None
+	else:
+	    b = (b1*m2 - b2*m1) / (m2 - m1)
 	if a1 > 0 and b > 0:
 		return a1
 	return None
