@@ -15,22 +15,41 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	b = (x1 - x3) ** 2 + (y1 - y2)**2
 	c = (x2 - x3)**2 + (y2-y3)**2
 	if a > b:
-		if c > a:
-			if c == a + b:
+		if b > c:
+			if a + b >= c:
 				return True
 			return False
 		else :
-			if a == c + b:
+			if a + c >= b:
 				return True
 			return False
-	else :
-		if c > b:
-			if c == a + b:
+	else:
+		if a > c:
+			if a + b >= c:
 				return True
 			return False
 		else :
-			if b == c + a:
+			if b + c >= a:
 				return True
 			return False
+	# if a > b:
+	# 	if c > a:
+	# 		if c == a + b:
+	# 			return True
+	# 		return False
+	# 	else :
+	# 		if a == c + b:
+	# 			return True
+	# 		return False
+	# else :
+	# 	if c > b:
+	# 		if c == a + b:
+	# 			return True
+	# 		return False
+	# 	else :
+	# 		if b == c + a:
+	# 			return True
+	# 		return False
+
 		
 	
