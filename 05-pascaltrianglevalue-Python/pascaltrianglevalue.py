@@ -12,12 +12,12 @@ import math
 def fun_pascaltrianglevalue(row, col):
 	l = []
 	k = 0
-	while k < row-1:
+	while k <= row:
 		b = math.factorial(row) / math.factorial(k) * math.factorial(row - k)
 		l.append(b)
 		k = k + 1
 	try:
-		return l[col-1]
+		return l[col]
 	except IndexError:
 		return 0
 	
