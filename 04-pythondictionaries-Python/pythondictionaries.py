@@ -34,8 +34,9 @@ locations = {'North America': {'USA': ["Atlanta",'Mountain View']} ,"Asia" : {"C
 countries = {"Asia" : ["China","India"],"Africa" : "Egypt" , 'North America': 'USA'}
 cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : ["Atlanta",'Mountain View']}
 def sortUSA():
-    for i in locations["North America"]["USA"]:
-        print(i)
+    print(locations["North America"]["USA"])
+    # for i in locations["North America"]["USA"]:
+    #     print(i)
 
                 
 
