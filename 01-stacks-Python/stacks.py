@@ -38,24 +38,24 @@ class LinkedList(object):
 
 class stack(object):
     def __init__(self,top=None):
-        self.ll = LinkedList(top)
+        self.top = top
 
     def push(self, new_element):
         "Push (add) a new element onto the top of the stack"
         # last_node = Element(self,new_element)
-        current = self.ll
-        if self.ll:
-            while current.top:
-                # top = current
-                current = current.top
-            current.top = new_element
+        current = self.top
+        if self.top:
+            while current.next:
+                # next = current
+                current = current.next
+            current.next = new_element
         else:
-            self.ll = new_element
+            self.top = new_element
         
     def pop(self):
-        "Pop (remove) the first element off the top of the stack and return it"
-        up = self.ll
-        while self.up.top.top == None:
-            current.top = up.top
+        "Pop (remove) the first element off the next of the stack and return it"
+        up = self.top
+        while self.up.next.next == None:
+            current.next = up.next
         
     
