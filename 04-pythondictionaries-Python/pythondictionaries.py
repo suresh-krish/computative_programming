@@ -36,13 +36,16 @@ cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : ["Atlanta",'Mounta
 def sortUSA():
     for i in locations:
         if i == "North America":
-            for j in i:
-                for k in locations[i][j]:
-                    print(k)
+            for j in locations[i]:
+                print(j)
+                # for k in locations[i]:
+                #     print(k)
                 
 
 def alphaAsia():
-    for i in countries["Asia"]:
-        for j in cities[i]:
-            print(j +" - " + i)
+    for i in locations:
+        if i == "Asia":
+            for j in locations[i]:
+                for k in locations[i][j]:
+                    print(k +" - " + j)
 
