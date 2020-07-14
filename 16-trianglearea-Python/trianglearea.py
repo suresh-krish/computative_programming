@@ -14,4 +14,4 @@ def trianglearea(s1, s2, s3):
 	sum = sum * (s-s3)
 	b = s * sum
 	c = math.sqrt(b)
-	return s
+	return c
