@@ -38,7 +38,7 @@ def sortUSA():
     print(a)
     print(locations["North America"]["USA"])
     for i in locations["North America"]["USA"]:
-        print(i)
+        print("None")
 
                 
 
