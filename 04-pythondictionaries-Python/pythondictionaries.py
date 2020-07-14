@@ -31,3 +31,4 @@ Asian City - Country
 Asian City - Country"""
 
 locations = {'North America': {'USA': ['Mountain View']}}
+continent = {"Asia" : ["India","china"],"Africa" : "Egypt" , 'North America': 'USA'}
