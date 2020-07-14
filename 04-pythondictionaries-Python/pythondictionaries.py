@@ -32,5 +32,6 @@ Asian City - Country"""
 
 locations = {'North America': {'USA': ['Mountain View',"Atlanta"]} ,"Asia" : {"India":["Banglore"],"China" : ["Shanghai"] }, "Africa" :{"Egypt":["Cairo"]}}
 countries = {"Asia" : ["India","China"],"Africa" : "Egypt" , 'North America': 'USA'}
-cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : "Atlanta"}
-print(cities[countries["North America"]])
+cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : ["Atlanta",'Mountain View']}
+def sortUSA():
+    print(cities[cities["USA"]])
