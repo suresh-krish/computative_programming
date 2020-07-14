@@ -42,5 +42,5 @@ def sortUSA():
 def alphaAsia():
     for j in locations["Asia"]:
         for k in locations["Asia"][j]:
-            print(k + " - " + locations["Asia"][j] )
+            print(k + " - " + j )
 
