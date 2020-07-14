@@ -15,8 +15,9 @@ def fun_set_kth_digit(n, k, d):
 	if lis[0] == "-":
 		lis.pop(0)
 	if len(lis) <= int(k):
-		lis.append(str(d))
+		# lis.append(str(d))
 		list1 = lis[::-1]
+		list1.append(str(d))
 	else:
 		list1 = lis[::-1]
 		list1[k] = str(d)
