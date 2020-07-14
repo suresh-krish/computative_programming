@@ -7,7 +7,12 @@ import math
 
 def trianglearea(s1, s2, s3):
 	# your code goes here
-	s = (s1 + s2 + s2) / 2
-	a = s*(s -s1)*(s-s2)*(s-s3)
-	c = math.sqrt(a)
+	s5 = (s1 + s2 + s2)
+	s = s5 / 2
+	sum = 1
+	sum = s - s1
+	sum = sum * (s-s2)
+	sum = sum * (s-s3)
+	b = s * sum
+	c = math.sqrt(b)
 	return c
