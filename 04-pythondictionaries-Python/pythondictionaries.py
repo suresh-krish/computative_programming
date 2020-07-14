@@ -30,5 +30,7 @@ American City
 Asian City - Country
 Asian City - Country"""
 
-locations = {'North America': {'USA': ['Mountain View']}}
-continent = {"Asia" : ["India","china"],"Africa" : "Egypt" , 'North America': 'USA'}
+locations = {'North America': {'USA': ['Mountain View',"Atlanta"]} ,"Asia" : {"India":["Banglore"],"China" : ["Shanghai"] }, "Africa" :{"Egypt":["Cairo"]}}
+countries = {"Asia" : ["India","China"],"Africa" : "Egypt" , 'North America': 'USA'}
+cities = {"India" : "Banglore", "China" : "Shanghai", "USA" : "Atlanta"}
+print(cities[countries["North America"]])
