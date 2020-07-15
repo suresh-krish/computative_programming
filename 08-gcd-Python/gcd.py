@@ -13,7 +13,7 @@ def gcd(m, n):
 	if n == 0:
 		return m
 	if m % n == 0:
-		return m
+		return n
 	else :
 		k = m % n
 		k = math.ceil(k)
