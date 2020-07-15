@@ -34,3 +34,5 @@ def ishappynumber(n):
 			else:
 				l.append(sum)
 				a = str(l[-1])
+	else :
+		return False
