@@ -11,12 +11,13 @@ def fun_nthfibonaccinumber(n):
 	a = 1
 	b = 1
 	c = 0
-	n = n - 2
+	
 	if n == 0:
 		return a
 	elif n == 1:
 		return b
 	else:
+		n = n - 2
 		while n >= 0:
 			c = a + b
 			a = b
