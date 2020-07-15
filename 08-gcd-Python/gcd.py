@@ -12,7 +12,7 @@ def gcd(m, n):
 	# your code goes here
 	if n == 0:
 		return m
-	if m % n == 0:
+	elif m % n == 0:
 		return n
 	else :
 		k = m % n
