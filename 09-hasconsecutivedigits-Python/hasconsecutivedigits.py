@@ -9,8 +9,10 @@ def hasconsecutivedigits(n):
 	else:
 		i = 0
 		res = False
-		while True:
+		while i < len(n):
 			if n[i] == n[i+1]:
 				res = True
 				break
+			else :
+				i = i + 1
 		return res
