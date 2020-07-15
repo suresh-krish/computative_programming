@@ -13,6 +13,6 @@ def fun_find_int_roots(a, b, c):
 	z = math.sqrt(b ** 2 - (4 *a*c))
 	p = (-b + z)/2*a
 	q = (-b - z)/2*a
-	return p , q
+	return int(q) , int(p)
 
 
