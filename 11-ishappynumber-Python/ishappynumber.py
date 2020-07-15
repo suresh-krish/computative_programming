@@ -16,4 +16,21 @@
 
 def ishappynumber(n):
 	# your code goes here
-	pass
+	if n  == 1:
+		return True
+	elif n > 1:
+		a = str(n)
+		l = []
+		flag = 0
+		while flag == 0:
+			sum = 0
+			for i in a:
+				sum = sum + (int(i) **2)
+			if sum == 1:
+				flag = 1
+				return True
+			elif sum in l:
+				return False
+			else:
+				l.append(sum)
+				a = str(l[-1])
