@@ -9,7 +9,7 @@
 import math
 def largestperfectsquare(n):
 	# your code goes here
-	for i in range(0,int(math.sqrt(n)+1),-1):
+	for i in range(0,int(math.sqrt(n)+1)):
 		if i ** i < n:
 			if int(math.ceil(i**i)) == i**i:
 				return i ** i
