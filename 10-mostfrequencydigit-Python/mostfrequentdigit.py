@@ -13,9 +13,9 @@ def mostfrequentdigit(n):
 			d = fre
 			a = i
 		if fre == d:
-			if i >= a:
+			if i <= a:
 				a = i
-	return a
+	return int(a)
 
 
 	
