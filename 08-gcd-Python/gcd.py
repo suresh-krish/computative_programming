@@ -14,4 +14,5 @@ def gcd(m, n):
 		return n
 	else :
 		k = m % n
+		k = int(k)
 		gcd(n,k)
