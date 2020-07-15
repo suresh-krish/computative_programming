@@ -12,10 +12,15 @@ def fun_nthfibonaccinumber(n):
 	b = 1
 	c = 0
 	n = n - 2
-	while n >= 0:
-		c = a + b
-		a = b
-		b = c
-		n = n - 1
+	if n == 0:
+		return a
+	elif n == 1:
+		return b
+	else:
+		while n >= 0:
+			c = a + b
+			a = b
+			b = c
+			n = n - 1
 
-	return c
+		return c
