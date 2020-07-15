@@ -13,7 +13,7 @@ def isperfectsquare(n):
 			if type(a) == int:
 				return True
 			else :
-			    return False
+			    return n
 		else:
 		    return False
 
