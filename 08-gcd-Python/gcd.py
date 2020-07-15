@@ -10,11 +10,13 @@
 import math
 def gcd(m, n):
 	# your code goes here
-	if n == 0:
-		return m
-	elif m % n == 0:
-		return n
-	else :
-		k = m % n
-		k = math.ceil(k)
-		gcd(n,k)
+	while True:
+		if n == 0:
+			return m
+		elif m % n == 0:
+			return n
+		else :
+			k = m % n
+			k = math.ceil(k)
+			m = n
+			n = k
