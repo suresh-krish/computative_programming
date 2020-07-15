@@ -8,8 +8,9 @@
 
 import math
 def fun_find_int_roots(a, b, c):
-	p = round(-1*(b)-1*(math.sqrt(b**2 - 4(a)(c)))) /2*a
-	q = round(-1 *(b)+1*(math.sqrt(b**2 - 4(a)(c)))) /2*a
-	return p , q
+	# p = str(round((-1*(b)-1*(math.sqrt(b**2 - 4(a)(c)))) /2*a))
+	# q = str(round((-1 *(b)+1*(math.sqrt(b**2 - 4(a)(c)))) /2*a))
+	p = math.sqrt(b ** 2 - 4 *(a)(c))
+	return p , p
 
 
