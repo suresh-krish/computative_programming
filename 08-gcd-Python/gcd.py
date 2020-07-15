@@ -10,10 +10,13 @@
 import math
 def gcd(m, n):
 	# your code goes here
-	while True:
+	flag = 0
+	while flag != 1:
 		if n == 0:
+			flag = 1
 			return m
 		elif m % n == 0:
+			flag = 1
 			return n
 		else :
 			k = m % n
