@@ -7,11 +7,11 @@ import math
 def isperfectsquare(n):
 	# your code goes here
 	try:
-		n = int(n)
+		n = float(n)
 		if n > 0:
 			a = math.sqrt(n)
-			# a = int(a)
-			if type(a) == int:
+			a = int(a)
+			if a**2 == n:
 				return True
 			else :
 			    return False
