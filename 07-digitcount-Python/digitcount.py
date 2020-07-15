@@ -7,4 +7,7 @@
 
 def digitcount(n):
 	# your code goes here
-	pass
+	res = str(n)
+	if n >= 0:
+		return len(res)
+	return(len(res) - 1)
