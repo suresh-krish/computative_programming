@@ -15,3 +15,5 @@ def largestperfectsquare(n):
 		if res < n:
 			if int(math.ceil(res)) == res:
 				return res
+				break
+			
