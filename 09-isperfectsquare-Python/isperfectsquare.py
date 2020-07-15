@@ -10,10 +10,11 @@ def isperfectsquare(n):
 		n = int(n)
 		if n > 0:
 			a = math.sqrt(n)
+			a = int(a)
 			if type(a) == int:
 				return True
 			else :
-			    return n
+			    return False
 		else:
 		    return False
 
