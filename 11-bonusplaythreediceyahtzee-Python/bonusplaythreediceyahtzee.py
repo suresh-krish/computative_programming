@@ -40,5 +40,22 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	# Your code goes here
-	pass
+	dice = str(dice)
+	l = list(dice)
+	if l[0] == l[1] == l[2]:
+		return (20 + int(l[0]) + int(l[1])+int(l[2]))
+	elif l[0] == l[1] :
+		return (10 + int(l[0]) + int(l[1]))
+	elif l[0] == l[2]:
+		return (10 + int(l[0]) + int(l[2]))
+	elif  l[1] == l[2] :
+		return (10 + int(l[1]) + int(l[2]))
+	else:
+		if int(l[0]) > int(l[1]):
+			if int(l[0]) > int(l[2]):
+				return int(l[0])
+			return int(l[2])
+		else:
+			if int(l[1]) > int(l[2]):
+				return int(l[1])
+			return int(l[2])
