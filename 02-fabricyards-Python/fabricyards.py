@@ -21,6 +21,6 @@ def fun_fabricexcess(inches):
 	a = inches/36
 	b = int(math.ceil(a))
 	b = b * 36
-	return b - a
+	return b
 
 
