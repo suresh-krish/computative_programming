@@ -12,4 +12,37 @@
 
 
 def fun_nth_happy_number(n):
-	return 0
+	if n == 0:
+		return 1
+	else :
+		l = []
+		nth = 0
+		p = 2
+		s = 2
+		while True:
+			if p!=0:
+				sum = 0
+				q = p%10
+				sum = sum + q * q
+				p = p // 10
+			elif sum == 1 or sum == 4:
+				nth = nth + 1
+				
+				if nth == n:
+					break
+				else:
+					s = s + 1
+					p = s
+
+			elif sum in l:
+				s = s + 1
+				p = s
+
+			else:
+				p = sum
+				l.append(sum)
+				sum = 0
+
+		return sum
+
+
