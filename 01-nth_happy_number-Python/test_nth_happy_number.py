@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.parametrize('a, result',[
-    (0,1),(1,7),(2,10),(3,13),(4,19),(5,23),(6,28),(7,31)
+    (0,1)
 ])
 def test_fun_nth_happy_number(a, result):
     assert fun_nth_happy_number(a) == result
