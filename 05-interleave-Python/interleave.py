@@ -10,19 +10,16 @@
 def fun_interleave(s1,s2):
 	l1 = list(s1)
 	l2 = list(s2)
-	i = 0
 	ans = ""
 	while True:
 		if len(l1) != 0 :
-			ans = ans + l1[i]
+			ans = ans + l1[0]
 			l1.pop(0)
 		if len(l2) != 0:
-			ans = ans + l2[i]
+			ans = ans + l2[0]
 			l2.pop(0)
 		if len(l1) == 0 and len(l2) == 0:
 			break
-		else:
-			i = i + 1
 	return ans
 
 
