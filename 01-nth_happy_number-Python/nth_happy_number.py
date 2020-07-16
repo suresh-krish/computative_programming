@@ -12,12 +12,14 @@
 
 
 def checkin(n):
-	digit = sum = 0
-	while(n > 0):
-		digit = n % 10
-		sum = sum + (digit * digit)
-		n = n // 10
-		return sum
+  digit = sum = 0
+  while(n>0):
+    digit = n % 10
+    sum = sum + (digit * digit)
+    n = n//10
+
+  # print("sum",sum)
+  return sum
 
 
 
@@ -28,6 +30,8 @@ def fun_nth_happy_number(n):
 	res = 2
 	p = 0
 	while p!=n:
+    # print("p", p)
+    # printh("nth",nth)
 		while nth != 1 and nth !=4:
 			nth = checkin(nth)
 		if nth == 1:
@@ -38,7 +42,7 @@ def fun_nth_happy_number(n):
 		    res = res + 1
 		    nth = res
 
-	return nth
+	return nth - 1
 
 
 
