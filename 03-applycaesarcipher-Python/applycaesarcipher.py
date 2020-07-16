@@ -13,6 +13,28 @@
 def fun_applycaesarcipher(msg, shift):
 	shift1 = "abcdefghijklmnopqrstuvwxyz"
 	shift2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	s1 = list(shift1)
+	sl1 = len(s1) - 1
+	s2 = list(shift2)
+	sl2 = len(s2) - 1
+	ans = ""
+	for i in msg:
+		if i in s1:
+			a = s1.index(i)
+			j = a + shift
+			if j > sl1:
+				j = j - sl1 - 1
+			ans = ans + s1[j]
+		elif i in s2:
+			a = s2.index(i)
+			j = a + shift
+			if j > sl2:
+				j = j - sl1 - 1
+			ans = ans + s2[j]
+		else:
+			ans = ans + i
+	return ans
+
 
 
 
