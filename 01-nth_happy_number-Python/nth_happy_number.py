@@ -11,47 +11,30 @@
 # assert(nthHappyNumber(7) == 31)
 
 
+def checkin(n):
+	digit = sum = 0
+	while(n > 0):
+		digit = n % 10
+		sum = sum + (digit * digit)
+		n = n // 10
+		return sum
+
+
+
 def fun_nth_happy_number(n):
 	if n == 0:
 		return 1
-	else :
-		l = [0]
-		nth = 0
-		p = 2
-		sum = 0
-		s = 2
-		while True:
-			if p!=0:
-				q = p%10
-				# print(q)
-				sum = sum + q * q
-				p = p // 10
-				if p == 0:
-					if sum == 1:
-						nth = nth + 1
-						if nth == n:
-							break
-						else :
-							if sum in l:
-								s = s + 1
-								p = s
-								sum = 0
-							else:
-								l.append(sum)
-								s = s + 1
-								p = s
-								sum = 0
-					elif sum in l:
+	nth = 2
+	p = 0
+	while p!=n:
+		while nth != 1 and nth !=4:
+			res = checkin(nth)
+		if res == 1:
+			p = p + 1
+			nth = nth + 1
+		nth = nth + 1
 
-					    s = s + 1
-					    res = p
-					    p = s
-					    sum = 0
-					else:
-					    l.append(sum)
-					    p = sum 
-					    sum = 0
-		return s
+	return nth
 
 
 
