@@ -43,6 +43,3 @@ def fun_nth_happy_number(n):
 		    nth = res
 
 	return nth - 1
-
-
-
