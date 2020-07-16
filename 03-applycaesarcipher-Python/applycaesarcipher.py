@@ -11,7 +11,8 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	shift1 = "abcdefghijklmnopqrstuvwxyz"
+	shift2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 
