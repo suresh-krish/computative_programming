@@ -5,5 +5,10 @@
 
 
 def fun_replace(s1, s2, s3):
-	return s1
+	l = len(s2)
+	i = s1.index(s2)
+	j = i + l
+	res = s1[:i] + s2 + s1[j:]
+	return res
+
 
