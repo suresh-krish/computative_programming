@@ -38,7 +38,8 @@ def fun_nth_happy_number(n):
 								sum = 0
 							else:
 								l.append(sum)
-								p = sum
+								s = s + 1
+								p = s
 								sum = 0
 					elif sum in l:
 
