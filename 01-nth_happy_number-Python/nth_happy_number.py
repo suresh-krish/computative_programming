@@ -25,14 +25,18 @@ def fun_nth_happy_number(n):
 	if n == 0:
 		return 1
 	nth = 2
+	res = 2
 	p = 0
 	while p!=n:
 		while nth != 1 and nth !=4:
 			nth = checkin(nth)
 		if nth == 1:
 			p = p + 1
-			nth = nth + 1
-		nth = nth + 1
+			res = res + 1
+			nth = res
+		else:
+		    res = res + 1
+		    nth = res
 
 	return nth
 
