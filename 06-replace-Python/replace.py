@@ -12,4 +12,6 @@ def fun_replace(s1, s2, s3):
 			a = s1.index(s2)
 			s1 = s1[0:a] + s3 + s1[a + l:]
 		return s1
+	else:
+		return s1
 
