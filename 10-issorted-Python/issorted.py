@@ -6,5 +6,11 @@
 # the list.
 
 def issorted(a):
-	# your code goes here
-	pass
+	b = str(a)
+	sm = b.sort()
+	bi = b.sort(reverse = True)
+	if b == sm or b == bi:
+		return True
+	return False
+
+			
