@@ -6,9 +6,10 @@
 
 def fun_replace(s1, s2, s3):
 	l = len(s2)
-	i = s1.index(s2)
-	j = i + l
-	res = s1[:i] + s2 + s1[j:]
-	return res
-
+	if s2 in s1:
+		b = s1.count(s2)
+		for i in range(0,b):
+			a = s1.index(s2)
+			s1 = s1[0:a] + s3 + s1[a + l:]
+		return s1
 
