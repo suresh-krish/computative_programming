@@ -5,10 +5,12 @@
 # The two closest numbers in that list are 2 and 6, and their difference is 4.
 
 def smallestdifference(a):
+	dif = 1000 ** 2
 	if len(a) == 0:
 		return -1
 	else:
-		a.sort()
-		if a[0] < 0:
-			return a[1] +(-1) * a[0]
-		return a[1] - a[0]
+		for i in range(len(a)-1):
+			for j in range(i + 1, len(a)):
+				if abs(a[i] - a[j]) < dif:
+					dif = abs(a[i] - a[j])
+		return dif
