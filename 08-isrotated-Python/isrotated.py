@@ -5,7 +5,13 @@
 
 
 def isrotated(str1, str2):
-	res = str2[-1] + str2[:-1]
-	if str1 == res:
+	if len(str1) != len(str2):
+		return False
+	r1 = ""
+	r2 = ""
+	l = len(str2)
+	r2 = r2 +  str2[l - 2:] +  str2[0: l - 2]
+	r1 = r1 + str2[2:] + str2[0:2]
+	if str1 == r1 or str1 == r2:
 		return True
 	return False
