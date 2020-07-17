@@ -15,10 +15,10 @@ def isrotated(str1, str2):
 		res = str1[::-1]
 		if res == str2:
 			return True
-	if str1 != r1 or str1 != r2:
-		res = str1[-1] + str1[:-1]
-		if res == str2:
-			return True
+	# if str1 != r1 or str1 != r2:
+	# 	res = str1[-1] + str1[:-1]
+	# 	if res == str2:
+	# 		return True
 	r2 = r2 +  str2[l - 2:] +  str2[0: l - 2]
 	r1 = r1 + str2[2:] + str2[0:2]
 	if str1 == r1 or str1 == r2:
