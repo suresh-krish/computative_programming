@@ -6,10 +6,9 @@
 # the list.
 
 def issorted(a):
-	b = str(a)
-	sm = b.sort()
-	bi = b.sort(reverse = True)
-	if b == sm or b == bi:
+	sm = sorted(a)
+	bi = sorted(a,reverse = True)
+	if a == sm or a == bi:
 		return True
 	return False
 
