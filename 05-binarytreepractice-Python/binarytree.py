@@ -35,7 +35,7 @@ class BinaryTree(object):
         #     elif self.root.value < find_val and self.root.right != None:
         #         self.root = self.root.right
         # return False
-        return preorder_search(root,find_val)
+        return self.preorder_search(root,find_val)
 
     def print_tree(self):
         """Print out all tree nodes
