@@ -6,7 +6,7 @@ import math
 
 def is_prime(p):
 	flag = 0
-	for i in range(2,math.sqrt(p)):
+	for i in range(2,int(math.sqrt(p))):
 		if p%i == 0:
 			flag = 1
 	return flag
@@ -17,13 +17,13 @@ def fun_nth_additive_prime(n):
 	p = 3
 	if n == 0:
 		return 2
-		
+
 	while a < n:
 		k = is_prime(p)
 		if k == 0:
 			ch = str(p)
 			sum = 0
-			for j in p:
+			for j in ch:
 				sum = sum + int(j)
 			d = is_prime(sum)
 			if d == 0:
