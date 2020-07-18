@@ -13,8 +13,7 @@ def fun_kth_occurrences(s, n):
 			d[i] = 1
 
 	x = sorted(d.items(), key=lambda kv : kv[1])
-	for i in x:
-		if x[i] == n:
-			return i
+	l = [v for v in dic.items]
+	return l[n -1]
 
 
