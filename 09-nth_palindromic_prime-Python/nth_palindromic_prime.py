@@ -6,10 +6,10 @@ import math
 
 def is_prime(p):
 	flag = 0
-	for i in range(1,int(math.ceil(p//2))):
+	for i in range(2,int(math.ceil(p//2))):
 		if p%i == 0:
-			flag = flag + 1
-	if flag < 2:
+			flag = 1
+	if flag == 0:
 	    return 0
 
 
