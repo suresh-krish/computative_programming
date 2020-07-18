@@ -35,11 +35,11 @@ class LinkedList(object):
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
-        if self.pos < position:
+        if self.pos <= position:
             return None
         else :
             current = self.head
-            state = 0
+            state = 1
             while state != position:
                 current = current.next
                 state = state + 1
