@@ -59,7 +59,7 @@ class LinkedList(object):
         else:
             current = self.head
             ch = 1
-            while ch < position:
+            while ch < position - 1:
                 current = current.next
                 ch = ch + 1
             change = current.next
