@@ -11,7 +11,6 @@ def sortin(array,low,high):
 			b = array[low]
 			array[low] = array[i]
 			array[i] = b
-			low = low + 1
 		else:
 			low = low + 1
 
