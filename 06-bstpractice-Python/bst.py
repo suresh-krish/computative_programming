@@ -41,10 +41,13 @@ class BST(object):
     def search(self, find_val):
         # Your code goes here
         current = self.root
+        if type(find_val) !=int:
+            return False
         while current != None: 
             # print("--",current.value)
             if current.value == find_val:
                 return True
+            
             
             # pass right subtree as new tree  
             elif find_val > current.value:  
