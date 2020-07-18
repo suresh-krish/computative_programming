@@ -9,12 +9,12 @@ class BST(object):
         self.root = Node(root)
 
     def placing(self,root,new_val):
-        if root.value < new_val:
+        if root.value > new_val:
             if root.left:
                 self.placing(self.root.left,new_val)
             else :
                 self.root.left = Node(new_val)
-        elif root.value > new_val:
+        elif root.value < new_val:
             if root.right:
                 self.placing(self.root.right,new_val)
             else :
@@ -36,30 +36,24 @@ class BST(object):
         if node.right:
             self.traverseInOrder(node.right)
 
-    def searching(self,root,find_val):
-        if root.value == find_val:
-            return True
-        elif root.value > find_val:
-            if root.left:
-                self.searching(self.root.left,find_val)
-            else:
-                return False
-        elif root.value < find_val:
-            if root.right:
-                self.searching(self.root.right,find_val)
-            else:
-                return False
-
-
-
+    
         
     def search(self, find_val):
         # Your code goes here
-        if not self.root:
-            return False
-        elif type(find_val) != int:
-            return False
-        else :
-            res = self.searching(self.root, find_val)
-            return res
+        current = self.root
+        while current != None: 
+            # print("--",current.value)
+            if current.value == find_val:
+                return True
+            
+            # pass right subtree as new tree  
+            elif find_val > current.value:  
+                current = current.right 
+    
+            # pass left subtree as new tree 
+            elif find_val < current.value: 
+                current = current.left  
+            else: 
+                return True # if the key is found return 1  
+        return False
 
