@@ -35,6 +35,7 @@ class LinkedList(object):
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
+        current = self.head
         if self.pos < position:
             return None
         else :
@@ -76,11 +77,11 @@ class LinkedList(object):
         # Your code goes here
         current = self.head
         dele = self.head
-        st = 1
+        st = 0
         while st < self.pos:
             if current.value == value and self.pos == 1:
                 current = current.next
-                self.head = head.next
+                self.head = current
                 self.pos = self.pos - 1
                 break
             elif current.value == value and self.pos != 1:
@@ -88,9 +89,11 @@ class LinkedList(object):
                     current = current.next
                     dele.next = current
                     self.pos = self.pos - 1
+                    break
                 else:
                     current = None
                     self.pos = self.pos - 1
+                    break
             else:
                 current = current.next
                 dele = dele.next
