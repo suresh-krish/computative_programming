@@ -13,12 +13,12 @@ class BinaryTree(object):
         """Helper method - use this to create a 
         recursive search solution."""
         # Your code goes here
-        if self.start.value == find_val:
+        if self.root.value == find_val:
                 return True
-        elif self.start.value > find_val and self.start.left != None:
-                preorder_search(start.left,find_val)
-        elif self.start.value < find_val and self.start.right != None:
-                preorder_search(start.right,find_val)
+        elif self.root.value > find_val and self.root.left != None:
+                preorder_search(root.left,find_val)
+        elif self.root.value < find_val and self.root.right != None:
+                preorder_search(root.right,find_val)
         else:
             return False
 
