@@ -6,8 +6,7 @@ import math
 
 def is_prime(p):
 	flag = 0
-	pr = p
-	for i in range(2,int((pr//2))):
+	for i in range(2,p):
 		if p%i == 0:
 			flag = 1
 	if flag == 0:
