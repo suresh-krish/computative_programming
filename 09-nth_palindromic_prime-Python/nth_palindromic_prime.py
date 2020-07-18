@@ -9,7 +9,7 @@ def is_prime(p):
 	for i in range(1,int(math.ceil(math.sqrt(p)))):
 		if p%i == 0:
 			flag = flag + 1
-	if flag <= 2:
+	if flag < 2:
 	    return 0
 
 
