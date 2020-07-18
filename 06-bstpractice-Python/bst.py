@@ -23,10 +23,7 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        if not self.root:
-            self.root = new_val
-        else:
-           self.placing(self.root,new_val)
+        self.placing(self.root,new_val)
 
     def printSelf(self):
         # Your code goes here
