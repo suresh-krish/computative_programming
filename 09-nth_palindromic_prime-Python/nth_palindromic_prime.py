@@ -5,10 +5,11 @@
 
 def is_prime(p):
 	flag = 0
-	for i in range(2,p):
+	for i in range(1,int(math.ceil(math.sqrt(p)))):
 		if p%i == 0:
-			flag = 1
-	return flag
+			flag = flag + 1
+	if flag <= 1:
+	    return flag
 
 
 def fun_nth_palindromic_prime(n):
