@@ -6,6 +6,14 @@ class HashTable(object):
     def __init__(self):
         self.table = [None]*10000
 
+        
+    def calculate_hash_value(self, string):
+        """Helper function to calulate a
+        hash value from a string."""
+        # Your code goes here
+        sum = (ord(string[0]))*100 + (ord(string[1]))*100
+        return sum
+
     def store(self, string):
         """Input a string that's stored in 
         the table."""
@@ -22,11 +30,5 @@ class HashTable(object):
         # Your code goes here
         pass
 
-    def calculate_hash_value(self, string):
-        """Helper function to calulate a
-        hash value from a string."""
-        # Your code goes here
-        sum = (ord(string[0]))*100 + (ord(string[1]))*100
-        return sum
 
 
