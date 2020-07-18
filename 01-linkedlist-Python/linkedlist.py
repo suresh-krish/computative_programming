@@ -78,14 +78,15 @@ class LinkedList(object):
         current = self.head
         dele = self.head
         st = 1
-        while st < self.pos:
+        while st <= self.pos:
             if current.value == value and st == 1:
                 current = current.next
                 self.head = current
                 self.pos = self.pos - 1
                 break
-            elif current.value == value and self.pos != 1:
-                if current.next != None:
+            elif current.value == value:
+                if current.next.value != None:
+                    dele.next = current
                     current = current.next
                     dele.next = current
                     self.pos = self.pos - 1
