@@ -85,7 +85,7 @@ class LinkedList(object):
                 self.pos = self.pos - 1
                 break
             elif current.value == value:
-                if current.next.value != None:
+                if current.next != None:
                     dele.next = current
                     current = current.next
                     dele.next = current
