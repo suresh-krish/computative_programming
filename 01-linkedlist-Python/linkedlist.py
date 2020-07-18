@@ -54,14 +54,14 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
-        if self.pos <= position:
+        if self.pos < position:
             return None
         else:
             current = self.head
             ch = 1
-            while ch != position:
+            while ch < position:
                 current = current.next
-                ch += 1
+                ch = ch + 1
             change = current.next
             current.next = new_element
             current = new_element
