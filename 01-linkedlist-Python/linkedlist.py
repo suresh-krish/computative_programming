@@ -16,7 +16,7 @@ class Element(object):
 class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
-        self.pos =  0
+        self.pos =  1
         
     def append(self, new_element):
         # Your code goes here
