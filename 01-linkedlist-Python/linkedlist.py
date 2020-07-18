@@ -83,7 +83,6 @@ class LinkedList(object):
                 current = current.next
                 self.head = current
                 self.pos = self.pos - 1
-                st = st + 1
                 break
             elif current.value == value and self.pos != 1:
                 if current.next != None:
@@ -98,6 +97,7 @@ class LinkedList(object):
             else:
                 current = current.next
                 dele = dele.next
+                st = st + 1
 
 
 
