@@ -28,6 +28,6 @@ def quicksort(array):
 	high = len(array) - 1
 	pivot = high
 	while low < high:
-	    low,high = sortin(array,low,high)
+	    array,low,high = sortin(array,low,high)
 
 	return array
