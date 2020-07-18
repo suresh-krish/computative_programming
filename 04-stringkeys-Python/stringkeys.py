@@ -28,7 +28,9 @@ class HashTable(object):
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        pass
-
+        a = (ord(string[0]))*100 + (ord(string[1]))
+        if self.table[a] == string:
+            return a
+        return -1
 
 
