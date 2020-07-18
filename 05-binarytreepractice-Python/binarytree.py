@@ -13,29 +13,29 @@ class BinaryTree(object):
         """Helper method - use this to create a 
         recursive search solution."""
         # Your code goes here
-        if self.root.value == find_val:
-                return True
-        elif self.root.value > find_val and self.root.left != None:
-                preorder_search(root.left,find_val)
-        elif self.root.value < find_val and self.root.right != None:
-                preorder_search(root.right,find_val)
-        else:
-            return False
 
     def search(self, find_val):
         """Return True if the value
         is in the tree, return
         False otherwise."""
-        # Your code goes here
-        # while True:
-        #     if self.root.value == find_val:
-        #         return True
-        #     elif self.root.value > find_val and self.root.left != None:
-        #         self.root = self.root.left
-        #     elif self.root.value < find_val and self.root.right != None:
-        #         self.root = self.root.right
-        # return False
-        return preorder_search(self.root,find_val)
+        if type(find_val) !=int:
+            return False
+        while current != None: 
+            # print("--",current.value)
+            if current.value == find_val:
+                return True
+            
+            
+            # pass right subtree as new tree  
+            elif find_val > current.value:  
+                current = current.right 
+    
+            # pass left subtree as new tree 
+            elif find_val < current.value: 
+                current = current.left  
+            else: 
+                return True # if the key is found return 1  
+        return False
 
     def print_tree(self):
         """Print out all tree nodes
