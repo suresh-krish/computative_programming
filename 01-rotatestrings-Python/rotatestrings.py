@@ -12,10 +12,14 @@ def fun_rotatestrings(s, n):
 	if i == 0:
 		return s
 	elif i > 0:
-		while i <= l:
+		while i > l:
 			i = i - l
 		s = s[i:] + s[:i]
 		return s
 	else:
-		s = s[:i] + s[i:]
+		while i < -l:
+			i = i + l
+		s = s[i:] + s[:i]
+		return s
+		s = s[i:] + s[:i]
 		return s
