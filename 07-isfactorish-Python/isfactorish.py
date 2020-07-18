@@ -12,5 +12,17 @@
 
 
 def fun_isfactorish(n):
-	return False
+	if n > 0:
+		n = str(n)
+		if len(n) <= 3 and "0" not in n and int(n)%int(n[0]) == 0 and int(n)%int(n[1]) == 0 and int(n)%int(n[2]) == 0:
+			return True
+		return False
+	else:
+		n = abs(n)
+		n = str(n)
+		if len(n) <= 3 and "0" not in n and int(n)%int(n[0]) == 0 and int(n)%int(n[1]) == 0 and int(n)%int(n[2]) == 0:
+			return True
+		return False
+		
+		
 
