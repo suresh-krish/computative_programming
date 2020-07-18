@@ -11,12 +11,12 @@ class BST(object):
     def placing(self,root,new_val):
         if self.root.value > new_val:
             if self.root.left != None:
-                placing(self.root.left,new_val)
+                self.placing(self.root.left,new_val)
             else :
                 self.root.left = new_val
         elif self.root.value < new_val:
             if self.root.right != None:
-                placing(self.root.right,new_val)
+                self.placing(self.root.right,new_val)
             else :
                 self.root.right = new_val
         
@@ -37,12 +37,12 @@ class BST(object):
             return True
         elif self.root.value > new_val:
             if self.root.left != None:
-                searching(self.root.left,new_val)
+                self.searching(self.root.left,new_val)
             else:
                 return False
         elif self.root.value < new_val:
             if self.root.right != None:
-                searching(self.root.right,new_val)
+                self.searching(self.root.right,new_val)
             else:
                 return False
 
