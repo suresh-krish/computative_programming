@@ -29,17 +29,17 @@ class BST(object):
         # Your code goes here
         pass
 
-    def searching(self,root,new_val):
-        if root.value == new_val:
+    def searching(self,root,find_val):
+        if root.value == find_val:
             return True
-        elif root.value < new_val:
+        elif root.value < find_val:
             if root.left:
-                self.searching(self.root.left,new_val)
+                self.searching(self.root.left,find_val)
             else:
                 return False
-        elif root.value > new_val:
+        elif root.value > find_val:
             if root.right:
-                self.searching(self.root.right,new_val)
+                self.searching(self.root.right,find_val)
             else:
                 return False
 
@@ -50,6 +50,8 @@ class BST(object):
         # Your code goes here
         if not self.root:
             return None
+        elif find_val != int:
+            return False
         else :
             self.searching(self.root, find_val)
 
