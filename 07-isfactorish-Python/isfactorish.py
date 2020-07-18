@@ -14,7 +14,7 @@
 def fun_isfactorish(n):
 	if n > 0:
 		n = str(n)
-		if len(n) <= 3 and "0" not in n and int(n)%int(n[0]) == 0 and int(n)%int(n[1]) == 0 and int(n)%int(n[2]) == 0:
+		if len(n) <= 3 and "0" not in n and int(n)%int(n[0]) == 0 and int(n)%int(n[1]) == 0 and int(n)%int(n[2]) == 0 and n[0] != n[1] and n[0] != n[2] and n[2] != n[1]:
 			return True
 		return False
 	else:
