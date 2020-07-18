@@ -2,14 +2,15 @@
 # and returns the nth palindromic Prime, which is a palidrome number such that 
 # it is also a prime. For example, 313 is a palindrome and it is prime 
 # so 313 is an palindrome Prime. fun_nth_palindrome_prime(0) returns 2
+import math
 
 def is_prime(p):
 	flag = 0
 	for i in range(1,int(math.ceil(math.sqrt(p)))):
 		if p%i == 0:
 			flag = flag + 1
-	if flag <= 1:
-	    return flag
+	if flag < 2:
+	    return 0
 
 
 def fun_nth_palindromic_prime(n):
