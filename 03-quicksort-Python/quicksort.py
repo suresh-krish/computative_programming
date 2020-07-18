@@ -2,23 +2,28 @@
 Input a list.
 Output a sorted list."""
 
-def sortin(array,low,high):
-	i = -1
-	j = high
-	while low < j:
-		if array[low] < array[j]:
-			i = i + 1
-			b = array[low]
-			array[low] = array[i]
-			array[i] = b
-		else:
-			low = low + 1
+def partition(arr,low,high): 
+	i = ( low-1 )
+	pivot = arr[high]
 
-	b = array[low]
-	array[low] = array[j]
-	array[j] = b
-	return array,low + 1,high
+	for j in range(low , high): 
 
+
+		if arr[j] <= pivot: 
+		
+	
+			i = i+1
+			arr[i],arr[j] = arr[j],arr[i] 
+
+	arr[i+1],arr[high] = arr[high],arr[i+1] 
+	return ( i+1 ) 
+
+
+def quickSorting(arr,low,high): 
+	if low < high: 
+		pi = partition(arr,low,high)
+		quickSorting(arr, low, pi-1) 
+		quickSorting(arr, pi+1, high) 
 
 
 
@@ -26,8 +31,7 @@ def quicksort(array):
 	low = 0
 	high = len(array) - 1
 	# pivot = high
-	while low < high:
-	    array,low,high = sortin(array,low,high)
+	quickSorting(array,low,high)
 
 	return array
 
