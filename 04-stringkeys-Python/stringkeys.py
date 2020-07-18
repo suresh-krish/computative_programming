@@ -11,7 +11,7 @@ class HashTable(object):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        sum = (ord(string[0]))*100 + (ord(string[1]))*100
+        sum = (ord(string[0]))*100 + (ord(string[1]))
         return sum
 
     def store(self, string):
@@ -19,8 +19,8 @@ class HashTable(object):
         the table."""
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter 
         # Your code goes here
-        sum = calculate_hash_value(string[:2])
-        table[sum] = string
+        sum = (ord(string[0]))*100 + (ord(string[1]))
+        self.table[sum] = string
 
         
     def lookup(self, string):
