@@ -26,7 +26,7 @@ class BST(object):
         if not self.root:
             self.root = new_val
         else:
-           placing(self.root,new_val)
+           self.placing(self.root,new_val)
 
     def printSelf(self):
         # Your code goes here
