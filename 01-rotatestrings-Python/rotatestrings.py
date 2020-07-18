@@ -8,9 +8,12 @@
 
 def fun_rotatestrings(s, n):
 	i = n
+	l = len(s)
 	if i == 0:
 		return s
 	elif i > 0:
+		while i <= l:
+			i = i - l
 		s = s[i:] + s[:i]
 		return s
 	else:
