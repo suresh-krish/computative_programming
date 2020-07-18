@@ -3,7 +3,7 @@ Input a list.
 Output a sorted list."""
 
 def sortin(array,low,high):
-	i = low
+	i = low = 0
 	j = high
 	while i < j:
 		if array[i] < array[j]:
@@ -18,7 +18,7 @@ def sortin(array,low,high):
 	b = array[low]
 	array[low] = array[j]
 	array[j] = b
-	return array,low + 1,high
+	return array,low,high - 1
 
 
 
