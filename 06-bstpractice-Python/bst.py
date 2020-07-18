@@ -50,7 +50,7 @@ class BST(object):
         # Your code goes here
         if not self.root:
             return None
-        elif find_val != int:
+        elif type(find_val) != int:
             return False
         else :
             self.searching(self.root, find_val)
