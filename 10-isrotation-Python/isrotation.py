@@ -9,4 +9,9 @@ def isrotation(x, y):
 	# Your code goes here
 	x,y = str(x),str(y)
 	if len(x) == len(y):
-		return True
+		res = x
+		for i in range(0,len(X)):
+			res = x[i:] + x[0:i]
+			if res == y:
+				return True
+	return False
