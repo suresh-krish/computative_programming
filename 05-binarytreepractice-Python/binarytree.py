@@ -20,6 +20,8 @@ class BinaryTree(object):
         False otherwise."""
         if type(find_val) !=int:
             return False
+
+        current = self.root
         while current != None: 
             # print("--",current.value)
             if current.value == find_val:
