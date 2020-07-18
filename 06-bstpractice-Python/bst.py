@@ -13,12 +13,12 @@ class BST(object):
             if self.root.left != None:
                 self.placing(self.root.left,new_val)
             else :
-                self.root.left = new_val
+                self.root.left = Node(new_val)
         elif self.root.value < new_val:
             if self.root.right != None:
                 self.placing(self.root.right,new_val)
             else :
-                self.root.right = new_val
+                self.root.right = Node(new_val)
         
 
     def insert(self, new_val):
