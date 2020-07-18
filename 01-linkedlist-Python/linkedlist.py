@@ -39,7 +39,7 @@ class LinkedList(object):
             return None
         else :
             current = self.head
-            state = 1
+            state = 0
             while state != position:
                 current = current.next
                 state = state + 1
@@ -54,8 +54,7 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
-        pos = 3
-        if pos < position:
+        if self.pos < position:
             return None
         else:
             current = self.head
