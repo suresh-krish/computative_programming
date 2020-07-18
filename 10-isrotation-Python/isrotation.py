@@ -10,7 +10,7 @@ def isrotation(x, y):
 	x,y = str(x),str(y)
 	if len(x) == len(y):
 		res = x
-		for i in range(0,len(X)):
+		for i in range(0,len(x)):
 			res = x[i:] + x[0:i]
 			if res == y:
 				return True
