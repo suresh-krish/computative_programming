@@ -19,21 +19,23 @@
 def fun_wordwrap(s, n):
 	a = ""
 	l = []
+	k = 0
 	for i in s:
-		if len(a) <= n:
+		if k < n:
 			if i == " ":
 				i = "-"
 			
 			a = a + i
 		else:
-			l.append(a)
-			a = ""
+			k = 0
+			a = a + "\n"
 			if i == " ":
 				i = "-"
 			
 			a = a + i
-	for i in l:
-		return i
+	return a
+
+
 
 
  
