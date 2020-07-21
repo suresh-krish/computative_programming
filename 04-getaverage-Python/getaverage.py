@@ -10,5 +10,16 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+	a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	l = s.split(",")
+	k = 0
+	sum = 0
+	for i in l:
+		if i[0] not in a:
+			sum = sum + float(i)
+			k = k + 1
+	return sum / k
+
+	
+
 
