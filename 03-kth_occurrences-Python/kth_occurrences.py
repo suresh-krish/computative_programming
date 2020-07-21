@@ -15,6 +15,6 @@ def fun_kth_occurrences(s, n):
 	x = sorted(d.items(), key=lambda kv : kv[1])
 	l = [v for v in x]
 	k =  l[len(l) - n]
-	return (k)
+	return (k[0])
 
 
