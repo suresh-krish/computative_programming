@@ -16,7 +16,7 @@ def shortenlongruns(L, k):
 		if L[i]  != l[-1]:
 			l.append(L[i])
 		elif L[i] == l[-1]:
-			sum = 0
+			sum = 1
 			ind = i
 			while True:
 				if L[ind] == L[ind + 1]:
@@ -26,10 +26,12 @@ def shortenlongruns(L, k):
 					if sum!=k:
 						l.append(L[ind - 1])
 						sum = 0
+						i = ind - 1
 						break
 					else:
-						l.pop()
+						i = ind - 1
 						break
+			# l.pop()
 	return l
 
 
