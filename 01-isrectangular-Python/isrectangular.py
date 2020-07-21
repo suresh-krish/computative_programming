@@ -4,7 +4,7 @@
 
 
 def fun_isrectangular(l):
-	le = len(l)
+	le = len(l[0])
 	flag = 0
 	for i in l:
 		if len(i) != le:
