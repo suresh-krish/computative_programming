@@ -10,23 +10,27 @@
 
 
 def shortenlongruns(L, k):
-	l = []
+	l = [L[0]]
 	flag = 0
-	for i in L:
-		if i  != l[-1]:
-			l.append(i)
-		elif i == l[-1]:
+	for i in range(1,len(L)):
+		if L[i]  != l[-1]:
+			l.append(L[i])
+		elif L[i] == l[-1]:
 			sum = 1
-			ind = L.index(i)
+			ind = i
 			while True:
 				if L[ind] == L[ind + 1]:
 				    sum = sum + 1
 				    ind= ind + 1
 				else:
 					if sum!=k:
-						l.append(ind - 1)
+						l.append(L[ind - 1])
 						sum = 0
 						break
+					else:
+						break
+			l.pop()
+	return l
 
 
 
