@@ -16,12 +16,15 @@ def destructiveshortenlongruns(L, k):
 	# Your code goes here
 	l = []
 	sum = 0
-	for i in range(0,len(L)):
+	for i in range(0,len(L) - 1):
 		if L[i] != L[i + 1]:
-			if sum != k:
-				l.append(L(i - 1))
+			if sum != k and sum != 0:
+				l.append(L[i - 1])
 			
-			l.append(L(i))
-		elif L[i] == l[i + 1]:
+			l.append(L[i])
+		elif L[i] == L[i + 1]:
 			sum = sum + 1
+	l.append(L[-1])
+
+	return l
 		
