@@ -12,7 +12,7 @@
 def shortenlongruns(L, k):
 	l = []
 	sum = 0
-	for i in range(1,len(L) - 1):
+	for i in range(0,len(L) - 1):
 		if L[i]  != L[i+1]:
 			if sum !=k and sum != 0:
 			    l.append(L[i - 1])
