@@ -12,4 +12,4 @@ def hasduplicates(L):
 				l.append(j)
 			else:
 				return True
-	return True
+	return False
