@@ -30,12 +30,12 @@ def fun_wordwrap(s, n):
 				a=a+i
 		s = a
 
-	for i in range(len(a)):
+	for i in range(len(s)):
 		if k == n:
-			res =res + "\n" + a[i]
+			res =res + "\n" + s[i]
 			k = 0
 		else:
-			res = res + a[i]
+			res = res + s[i]
 			k = k + 1
 
 	return res
