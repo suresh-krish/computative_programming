@@ -33,7 +33,7 @@ def fun_wordwrap(s, n):
 	for i in range(len(s)):
 		if k == n:
 			res =res + "\n" + s[i]
-			k = 0
+			k = 1
 		else:
 			res = res + s[i]
 			k = k + 1
