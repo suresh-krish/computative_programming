@@ -5,10 +5,13 @@
 
 def fun_isrectangular(l):
 	le = len(l)
+	flag = 0
 	for i in l:
-		if len(i) == le:
-			return True
-		return False
+		if len(i) != le:
+			flag = 1
+	if flag == 0:
+	    return True
+	return False
 
 
 
