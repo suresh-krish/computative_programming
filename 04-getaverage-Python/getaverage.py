@@ -18,6 +18,9 @@ def fun_getaverage(s):
 		if i[0] not in a:
 			sum = sum + float(i)
 			k = k + 1
+
+	if k == 0:
+		return sum
 	return sum / k
 
 	
