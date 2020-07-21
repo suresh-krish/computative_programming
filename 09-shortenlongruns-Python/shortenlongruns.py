@@ -10,5 +10,25 @@
 
 
 def shortenlongruns(L, k):
-	# Your code goes here
-	pass
+	l = []
+	flag = 0
+	for i in L:
+		if i  != l[-1]:
+			l.append(i)
+		elif i == l[-1]:
+			sum = 1
+			ind = L.index(i)
+			while True:
+				if L[ind] == L[ind + 1]:
+				    sum = sum + 1
+				    ind= ind + 1
+				else:
+					if sum!=k:
+						l.append(ind - 1)
+						sum = 0
+						break
+
+
+
+
+
