@@ -31,7 +31,7 @@ def shortenlongruns(L, k):
 					else:
 						i = ind - 1
 						break
-			# l.pop()
+			l.pop()
 	return l
 
 
