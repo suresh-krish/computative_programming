@@ -10,7 +10,7 @@
 def lookandsay(a):
 	# Your code goes here
 	i = 0
-	l = 0
+	l = 1
 	lis = []
 	if len(a) == 0:
 		return lis
