@@ -16,9 +16,9 @@
 def ismostlymagicsquare(a):
 	l = len(a[0])
 	li = []
-	sum2 = 0
-	sum = 0
 	for j in range(l):
+		sum2 = 0
+		sum = 0
 		for i in range(l):
 			sum = sum + a[j][i]
 			sum2 = sum2 + a[i][j]
@@ -26,5 +26,11 @@ def ismostlymagicsquare(a):
 		li.append(sum2)
 		li.append(sum)
 
-	return li
+	flag = 0
+	for i in range(0,len(li)-1):
+		if li[i] != li[i+1]:
+			flag = 1
+	if flag == 1:
+		return False
+	return True
 
