@@ -15,11 +15,12 @@ def fun_matrixmultiply(m1, m2):
     if len(a) == 1 or a[1] != b[0]:
         return None
     else:
-        res = np.zeros(a[0],b[1])
+        res = np.zeros([a[0],b[1]], dtype = int)
         for i in range(len(m1)):
             for j in range(len(m2[0])):
-                mu = 0
                 for k in range(len(m2)):
                     res[i][j] = res[i][j] + m1[i][k] * m2[k][j]
+
+        res = list(res.flatten())
         return res
                     
