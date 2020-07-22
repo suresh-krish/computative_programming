@@ -3,6 +3,11 @@
 # rather than added. For example: alternatingSum([1,2,3,4,5]) returns 1-2+3-4+5 
 # (that is, 3). If L is empty, return 0. You may not use loops/iteration in this problem.
 
-
-def fun_recursions_alternatingsum(l): 
-	return 0
+def fun_recursions_alternatingsum(l):
+	if len(l) == 0:
+		return 0
+	elif len(l) == 1:
+		return l[0]
+	else :
+		return l[0] + fun_recursions_alternatingsum(l[1::1])
+	
