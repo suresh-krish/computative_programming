@@ -9,6 +9,9 @@ import numpy as np
 def fun_matrixmultiply(m1, m2):
     M1 = np.array(m1)
     M2 = np.array(m2)
-    if M1.shape != M2.shape:
+    a = M1.shape
+    b = M2.shape
+    if a[1] != b[0]:
         return None
-    return M1.dot(M2)
+    else:
+        return M1.dot(M2)
