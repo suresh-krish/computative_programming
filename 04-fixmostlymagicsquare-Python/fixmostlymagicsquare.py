@@ -6,6 +6,19 @@
 # square.
 
 
+
 def fixmostlymagicsquare(L):
-	pass
-	# Your code goes here
+	for  i in range(len(L)):
+		for j in range(len(L)):
+			sum = 0
+			ch = 0
+			for k in range(len(L)):
+				sum = sum + L[i][k]
+				ch = ch + L[k][j]
+
+			if sum != ch:
+				L[i][k] = sum - ch
+	
+	
+	
+	return L
