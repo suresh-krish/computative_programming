@@ -8,6 +8,7 @@
 
 
 def fixmostlymagicsquare(L):
+	l = []
 	for  i in range(len(L)):
 		for j in range(len(L)):
 			sum = 0
@@ -20,7 +21,10 @@ def fixmostlymagicsquare(L):
 				ch = ch + L[k][j]
 				print(sum,ch)
 
-			if sum != ch:
+
+			l.append(ch)
+
+			if sum != ch and sum != l[0]:
 				z  = ch - sum
 				z = abs(z)
 				L[i][k] = L[i][k] - z
