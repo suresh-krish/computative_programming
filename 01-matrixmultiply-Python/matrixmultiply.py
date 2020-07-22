@@ -11,7 +11,7 @@ def fun_matrixmultiply(m1, m2):
     M2 = np.array(m2)
     a = M1.shape
     b = M2.shape
-    if a[1] != b[0]:
+    if len(a) == 1 or a[1] != b[0]:
         return None
     else:
         return M1.dot(M2)
