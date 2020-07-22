@@ -8,4 +8,4 @@ import numpy as np
 
 def fun_matrixmultiply(m1, m2):
     M1 = np.array(m1)
-    print(M1)
+    print(d.type(M1))
