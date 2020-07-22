@@ -8,4 +8,7 @@ import numpy as np
 
 def fun_matrixmultiply(m1, m2):
     M1 = np.array(m1)
-    print(d.type(M1))
+    M2 = np.array(m2)
+    if M1.dim != M2.dim:
+        return None
+    return M1.dot(M2)
