@@ -9,5 +9,5 @@ def fun_recursions_alternatingsum(l):
 	elif len(l) == 1:
 		return l[0]
 	else :
-		return l[0] + fun_recursions_alternatingsum(l[1::1])
+		return l[0] - fun_recursions_alternatingsum(l[1::2])
 	
