@@ -22,7 +22,7 @@ def fixmostlymagicsquare(L):
 			if sum != ch:
 				z  = ch - sum
 				z = abs(z)
-				l[i][k] = l[i][k] - z
+				L[i][k] = L[i][k] - z
 	
 	
 	
