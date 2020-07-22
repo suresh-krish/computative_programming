@@ -3,10 +3,9 @@
 # is the result of multiplying the two matrices. Return None if the 
 # two matrices cannot be multiplied for any reason.
 
+import numpy as np
+
 
 def fun_matrixmultiply(m1, m2):
-    return None
-
-
-
-
+    M1 = np.array(m1)
+    print(M1)
