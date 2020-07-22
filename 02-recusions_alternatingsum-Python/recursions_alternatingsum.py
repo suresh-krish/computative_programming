@@ -10,5 +10,5 @@ def fun_recursions_alternatingsum(l):
 		return l[0]
 	else :
 		print(l[0])
-		return l[0] - fun_recursions_alternatingsum(l[1::2])
+		return l[0] - fun_recursions_alternatingsum(l[1:])
 	
