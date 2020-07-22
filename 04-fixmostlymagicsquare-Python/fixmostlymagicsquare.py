@@ -17,7 +17,7 @@ def fixmostlymagicsquare(L):
 				ch = ch + L[k][j]
 
 			if sum != ch:
-				L[i][k] = sum - ch
+				L[i][k] = ch - sum
 	
 	
 	
