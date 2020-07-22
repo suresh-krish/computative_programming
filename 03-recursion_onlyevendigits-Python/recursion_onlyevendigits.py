@@ -11,3 +11,7 @@
 def fun_recursion_onlyevendigits(l):
 	if len(l) == 0:
 		return l
+	elif l[0]:
+		i = l[0]
+		while i != 0:
+			
