@@ -16,8 +16,9 @@ def fixmostlymagicsquare(L):
 				sum = sum + L[i][k]
 				print(L[i][k])
 				print(L[k][j])
-				print(sum,ch)
+				# print(sum,ch)
 				ch = ch + L[k][j]
+				print(sum,ch)
 
 			if sum != ch:
 				z  = ch - sum
