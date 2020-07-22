@@ -14,10 +14,15 @@ def fixmostlymagicsquare(L):
 			ch = 0
 			for k in range(len(L)):
 				sum = sum + L[i][k]
+				print(L[i][k])
+				print(L[k][j])
+				print(sum,ch)
 				ch = ch + L[k][j]
 
 			if sum != ch:
-				L[i][k] = ch - sum
+				z  = ch - sum
+				z = abs(z)
+				l[i][k] = l[i][k] - z
 	
 	
 	
