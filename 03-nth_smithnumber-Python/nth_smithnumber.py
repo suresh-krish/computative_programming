@@ -40,15 +40,15 @@ def fun_nth_smithnumber(n):
         sum = 0
         for i in l:
             while i != 0:
-                p = i % 10
-                sum = sum + p
+                q = i % 10
+                sum = sum + q
                 i = i // 10
 
         res = 0
         ch = x
-        while x != 0:
-            p = x % 10
-            res = res + p
+        while ch != 0:
+            z = ch % 10
+            res = res + z
             ch = ch // 10
 
         if res == sum:
