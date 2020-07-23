@@ -8,10 +8,39 @@
 # Also the function returns the empty list if the original list is empty. 
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
+
+def conversion(string,stringlen,j,lis):
+	if(j >= stringlen):
+		if len(lis) == 0:
+			return "0"
+		else :
+			return lis
+	if int(string[j]%2 == 0):
+		lis = lis + string[j]
+
+	return conversion(string,stringlen,j+1,lis)
+
+def recursive (l,le,i,li):
+	if(i >= le):
+		return li
+	li.append(int(conversion(str(l[i]),len(str(l[i])),0,"")))
+	return recursive(l,le,i+1,li)
+
+
 def fun_recursion_onlyevendigits(l):
-	if len(l) == 0:
-		return l
-	elif l[0]:
-		i = l[0]
-		while i != 0:
-			
+	li = []
+
+	return recursive(l,len(l),0,li)
+
+
+
+def string_red(s,stlen,stind,news):
+	if(stind>=stlen):
+		if(len(news) == 0):
+			return "0"
+		else:
+			return news
+	if(int(s[stind])%2 == 0):
+		news =news+s[stind]
+
+	return string_red(s,stlen,stind+1,news)
