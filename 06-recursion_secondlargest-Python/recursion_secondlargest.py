@@ -16,11 +16,14 @@
 def recursive(L,l,high,sechi):
 	if L[l] > high:
 		high = L[0]
+	if L[l] == high:
+		sechi = L[l]
+	
 	if L[l] <= high and L[l] > sechi:
-		sechi = L[l + 1]
+		sechi = L[l]
 
 	L.pop(0)
-	if len(L) > 1:
+	if len(L) > 0:
 		return recursive(L,l+1,high,sechi)
 	else :
 	    return sechi
