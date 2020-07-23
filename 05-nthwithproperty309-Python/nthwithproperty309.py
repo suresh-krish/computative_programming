@@ -15,9 +15,7 @@ def nthwithproperty309(n):
 	while a < 7900:
 		flag = 0
 		a = a + 1
-		j = a
-		for i in range(0,5):
-			j = j * a
+		j = a ** 5
 
 		j = list(str(j))
 		z = set(j)
