@@ -13,6 +13,22 @@
 # Again, you do not need to sort the list. We didn't sort it in our sample solution. We just tracked the two largest 
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
+def recursive(L,l,high,sechi):
+	if L[l] > high:
+		high = L[0]
+	if L[l] <= high and L[l + 1] > sechi:
+		sechi = L[l + 1]
+
+	L.pop(0)
+	if len(L) > 1:
+		return recursive(L,l+1,high,sechi)
+	else :
+	    return sechi
+
+
+
 def recursion_secondlargest(L):
-	# Your code goes here
-	pass
+	if len(L) == 0 or len(L) == 1:
+		return None
+
+	return recursive(L,0,-100,-99)
