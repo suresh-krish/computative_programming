@@ -19,14 +19,19 @@ def fun_nth_kaprekarnumber(n):
         start = start + 1
         a = start * start
         st = str(a)
-        b = len(st) - 1
+        b = len(st)
         nth = b // 2
         res = 0
         if st[:nth] != "":
             res = res + int(st[:nth])
+        else:
+            res = res + 0
 
-        if st[nt:] != "":
+        if st[nth:] != "":
             res = res + int(st[nth:])
+        else:
+            res = res + 0
+
         if int(res) == start:
             p = p + 1
 
