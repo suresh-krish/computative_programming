@@ -16,7 +16,7 @@
 def recursive(L,l,high,sechi):
 	if L[l] > high:
 		high = L[0]
-	if L[l] <= high and L[l + 1] > sechi:
+	if L[l] <= high and L[l] > sechi:
 		sechi = L[l + 1]
 
 	L.pop(0)
