@@ -16,7 +16,7 @@ def fun_carrylessadd(x, y):
 	while True:
 		sum = 0
 		if len(x) -1 < i and len(y) - 1 < i:
-			return res
+			return int(res)
 		if len(x) - 1 >= i:
 			sum = sum + int(x[i])
 
@@ -24,7 +24,7 @@ def fun_carrylessadd(x, y):
 			sum = sum + int(y[i])
 
 		r = sum%10
-		res = r + res
+		res = str(r) + res
 		i = i + 1
 
 
