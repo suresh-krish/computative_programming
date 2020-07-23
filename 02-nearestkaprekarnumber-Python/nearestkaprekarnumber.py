@@ -13,4 +13,45 @@
 import math
 
 def fun_nearestkaprekarnumber(n):
-    return 1
+    start = 2
+    n1 = 20
+    l = [1]
+    p = 0
+    while p !=n1 :
+        start = start + 1
+        a = start * start
+        st = str(a)
+        b = len(st)
+        nth = b // 2
+        res = 0
+        res1 = 0
+        res2 = 0
+        ress = 0
+        if st[:nth] != "":    
+            res = res + int(st[:nth])
+            if len(st[:nth - 1]) > 2:
+                res1 = int(st[:nth-1])
+                res2 = int(st[:nth-2])
+        else:
+            res = res + 0
+
+        if st[nth:] != "":
+            res = res + int(st[nth:])
+            if res2 > 1:
+                ress = ress + int(st[nth:])
+        else:
+            res = res + 0
+
+        if int(res) == start or res1 + ress == start or res2 + ress == start:
+            print(start)
+            p = p + 1
+            l.append(start)
+
+    min = 10000000000000
+    for i in l:
+        if abs(i-n) < min:
+            min = i
+
+    return min
+
+
