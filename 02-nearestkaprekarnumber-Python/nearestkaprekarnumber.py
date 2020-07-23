@@ -13,6 +13,7 @@
 import math
 
 def fun_nearestkaprekarnumber(n):
+    print(n)
     near = n
     start = 2
     n1 = 20
@@ -53,10 +54,10 @@ def fun_nearestkaprekarnumber(n):
     for i in l:
         print("i",i)
         print("n",near)
-        if abs(i-n) < min:
+        if abs(i-near) < min:
             print(abs(i-n))
             min = i
-
+    print("min",min)
     return min
 
 
