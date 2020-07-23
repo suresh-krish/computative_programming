@@ -29,7 +29,7 @@ def nthwithproperty309(n):
 		if flag == 0:
 			l.append(a)
 
-	return l[n]
+	return l.index(n)
 
 
 
