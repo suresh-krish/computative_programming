@@ -14,14 +14,14 @@
 # values as we recursively traversed the list. Also, you may not use loops/iteration in this problem
 
 def recursive(L,l,high,sechi):
-	if L[l] > high:
-		high = L[0]
-	
-	if L[l] <= high and L[l] > sechi:
-		sechi = L[l]
+	if len(L) > 2:
+		if L[l] > high:
+			high = L[0]
 
-	L.pop(0)
-	if len(L) > 0:
+		if L[l] <= high and L[l] > sechi:
+			sechi = L[l]
+
+		L.pop(0)
 		return recursive(L,l+1,high,sechi)
 	else :
 	    return sechi
