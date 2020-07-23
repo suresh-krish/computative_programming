@@ -21,6 +21,7 @@ def recursive(L,v,lo,high,l):
 	mid = (lo + high) //2
 	if L[mid] == v:
 		l.append((mid,v))
+		return l
 	else:
 		l.append((mid,L[mid]))
 		if L[mid] > v:
@@ -28,7 +29,7 @@ def recursive(L,v,lo,high,l):
 		else :
 			lo = mid
 
-	return recursive(L,v,lo,high,l)
+		return recursive(L,v,lo,high,l)
 
 
 def recursion_binarysearchvalues(L, v):
