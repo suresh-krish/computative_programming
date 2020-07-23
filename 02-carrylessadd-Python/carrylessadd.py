@@ -6,5 +6,26 @@
 
 
 def fun_carrylessadd(x, y):
-	return 0
+	x = str(x)
+	x = x[::-1]
+	y = str(y)
+	y = y[::-1]
+	i = 0
+	res = ""
+
+	while True:
+		sum = 0
+		if len(x) -1 < i and len(y) - 1 < i:
+			return res
+		if len(x) - 1 >= i:
+			sum = sum + int(x[i])
+
+		if len(y) - 1 >= i:
+			sum = sum + int(y[i])
+
+		r = sum%10
+		res = r + res
+		i = i + 1
+
+
 
