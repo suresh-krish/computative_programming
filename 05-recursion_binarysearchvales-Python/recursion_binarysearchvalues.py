@@ -18,18 +18,19 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 def recursive(L,v,lo,high,l):
-	mid = (lo + high) //2
-	if L[mid] == v:
-		l.append((mid,v))
-		return l
-	else:
+	if high >= lo:
+		mid = (lo + high) //2
 		l.append((mid,L[mid]))
-		if L[mid] > v:
-			high = mid
-		else :
-			lo = mid
+		if L[mid] == v:
+			if mid and L[mid] not in l:
+				l.append((mid,v))
+			return l
 
-		return recursive(L,v,lo,high,l)
+		elif ord(L[mid] > ord(v)):
+			return recursive(L,v,lo,mid-1,l)
+		else:
+
+			return recursive(L,v,mid+1,high,l)
 
 
 def recursion_binarysearchvalues(L, v):
