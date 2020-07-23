@@ -5,5 +5,18 @@
 # because there is a run of 3 consecutive 7's), 
 # as does longestDigitRun(-677886).
 def longestdigitrun(n):
-	# Your code goes here
-	pass
+	if n < 0:
+		n = abs(n)
+
+	n = str(n)
+	for i in range(0,len(n)-1):
+		b  = 0
+		for j in range(i+1,len(n)-1):
+			if n[i] != n[j]:
+				break
+			else:
+				a = n[j]
+				b = b + 1
+
+
+		
