@@ -36,6 +36,8 @@ def fun_nth_smithnumber(n):
     while p != n:
         x = x + 1
         l = isprime(x)
+        if x in l:
+            l.remove(x)
 
         sum = 0
         for i in l:
