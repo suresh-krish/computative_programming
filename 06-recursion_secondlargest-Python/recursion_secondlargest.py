@@ -21,7 +21,7 @@ def recursive(L,l,high,sechi):
 		sechi = L[l]
 
 	L.pop(0)
-	if len(L) > 1:
+	if len(L) > 2:
 		return recursive(L,l+1,high,sechi)
 	else :
 	    return sechi
