@@ -31,7 +31,7 @@ def fun_nth_lefttruncatableprime(n):
                 p = p + 1
             else:
                 res = i[1:]
-                if len(res) > 2:
+                if len(res) > 1:
                     if res[1:] in prime and res in prime:
                         p = p + 1
                 else:
