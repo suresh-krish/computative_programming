@@ -56,6 +56,7 @@ def fun_nearestkaprekarnumber(n):
         print("i",i)
         print("n",near)
         if abs(i-near) < min:
+            min = abs(i-near)
             print("sub",abs(i-n))
             o = i
     print("min",min)
