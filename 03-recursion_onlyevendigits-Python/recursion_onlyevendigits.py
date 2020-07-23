@@ -15,7 +15,7 @@ def conversion(stri,strilen,j,lis):
 			return "0"
 		else :
 			return lis
-	if (int(stri[j]%2) == 0):
+	if (int(stri[j])%2 == 0):
 		lis = lis + stri[j]
 
 	return conversion(stri,strilen,j+1,lis)
