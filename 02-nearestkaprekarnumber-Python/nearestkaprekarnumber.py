@@ -43,13 +43,15 @@ def fun_nearestkaprekarnumber(n):
             res = res + 0
 
         if int(res) == start or res1 + ress == start or res2 + ress == start:
-            print(start)
+            # print(start)
             p = p + 1
             l.append(start)
 
     min = 10000000000000
     for i in l:
+        print("i",i)
         if abs(i-n) < min:
+            print(abs(i-n))
             min = i
 
     return min
