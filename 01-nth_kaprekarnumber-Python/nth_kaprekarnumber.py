@@ -23,7 +23,14 @@ def fun_nth_kaprekarnumber(n):
         nth = b // 2
         res = 0
         if st[:nth] != "":
-            res = res + int(st[:nth])
+            if st[:nth][-1] == "0" and st[:nt][-2] == "0":
+                fust = st[:nt - 2]
+            elif st[:nt][-1] == "0":
+                fust = st[:nth-1] 
+            else:
+                fust = st[:nth]
+            
+            res = res + int(fust)
         else:
             res = res + 0
 
@@ -33,6 +40,7 @@ def fun_nth_kaprekarnumber(n):
             res = res + 0
 
         if int(res) == start:
+            print(start)
             p = p + 1
 
     return start
