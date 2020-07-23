@@ -7,8 +7,8 @@
 def recursive(a,b,c):
 	if b > a:
 		return c
-	if (11623452267%b == 0):
-		c.append(num)
+	if (1162261467%b == 0):
+		c.append(b)
 	return recursive(a,b+1,c)
 
 def recursion_powersof3ton(n):
