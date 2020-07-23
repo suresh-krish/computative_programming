@@ -10,4 +10,27 @@
 import math
 
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    start = 2
+    p = 0
+    if n == 0:
+        return 1
+
+    while p !=n :
+        start = start + 1
+        a = start * start
+        st = str(a)
+        b = len(st) - 1
+        nth = b // 2
+        res = 0
+        if st[:nth] != "":
+            res = res + int(st[:nth])
+
+        if st[nt:] != "":
+            res = res + int(st[nth:])
+        if int(res) == start:
+            p = p + 1
+
+    return start
+
+
+    
