@@ -11,4 +11,12 @@
 import math
 
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    prime = [2]
+    for i in range(3,500,2):
+        for j in range(2,int(math.sqrt(i) + 1)):
+            if i % j == 0:
+                break
+            else:
+                prime.append(i)
+
+    print(prime)
