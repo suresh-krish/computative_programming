@@ -22,24 +22,25 @@ def fun_nth_kaprekarnumber(n):
         b = len(st)
         nth = b // 2
         res = 0
-        if st[:nth] != "":
-            if st[:nth][-1] == "0" and st[:nt][-2] == "0":
-                fust = st[:nt - 2]
-            elif st[:nt][-1] == "0":
-                fust = st[:nth-1] 
-            else:
-                fust = st[:nth]
-            
-            res = res + int(fust)
+        res1 = 0
+        res2 = 0
+        ress = 0
+        if st[:nth] != "":    
+            res = res + int(st[:nth])
+            if len(st[:nth - 1]) > 2:
+                res1 = int(st[:nth-1])
+                res2 = int(st[:nth-2])
         else:
             res = res + 0
 
         if st[nth:] != "":
             res = res + int(st[nth:])
+            if res2 > 1:
+                ress = ress + int(st[nth:])
         else:
             res = res + 0
 
-        if int(res) == start:
+        if int(res) == start or res1 + ress == start or res2 + ress == start:
             print(start)
             p = p + 1
 
