@@ -6,19 +6,20 @@
 
 def nthwithproperty309(n):
 	a = 309
+	l = [309]
 	p = 0
 	ch = "0123456789"
 	if n == 0:
 		return 309
 
-	while p != n:
+	while a < 7900:
 		flag = 0
 		a = a + 1
 		j = a
 		for i in range(0,5):
 			j = j * a
 
-		j = list(str(a))
+		j = list(str(j))
 		z = set(j)
 		for i in ch:
 			if i not in z:
@@ -26,9 +27,9 @@ def nthwithproperty309(n):
 				break
 
 		if flag == 0:
-			p = p + 1
+			l.append(a)
 
-	return a
+	return l[n]
 
 
 
