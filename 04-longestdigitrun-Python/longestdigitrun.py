@@ -17,12 +17,12 @@ def longestdigitrun(n):
 			l.append((i,1))
 
 
-	maxi = max(l[1])
-	l = []
-	for i in dic:
-		if dic[i] == maxi:
-			l.append(i)
+	maxi = max(i[1] for i in l)
+	li = []
+	for i in l:
+		if i[1] == maxi:
+			li.append(i[0])
 
-	return int(min(l))
+	return int(min(li))
 
 		
