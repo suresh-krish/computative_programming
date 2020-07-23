@@ -50,14 +50,15 @@ def fun_nearestkaprekarnumber(n):
             l.append(start)
 
     min = 100000
+    o = 0
     print(l)
     for i in l:
         print("i",i)
         print("n",near)
         if abs(i-near) < min:
-            print(abs(i-n))
-            min = i
+            print("sub",abs(i-n))
+            o = i
     print("min",min)
-    return min
+    return o
 
 
