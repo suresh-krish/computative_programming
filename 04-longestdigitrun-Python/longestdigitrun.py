@@ -9,14 +9,20 @@ def longestdigitrun(n):
 		n = abs(n)
 
 	n = str(n)
-	for i in range(0,len(n)-1):
-		b  = 0
-		for j in range(i+1,len(n)-1):
-			if n[i] != n[j]:
-				break
-			else:
-				a = n[j]
-				b = b + 1
+	dic = {}
+	for i in n:
+		if i in dic:
+			dic[i] = dic[i] + 1
+		else:
+			dic[i] = 1
 
+
+	maxi = max(dic.values())
+	l = []
+	for i in dic:
+		if dic[i] == maxi:
+			l.append(i)
+
+	return min(l)
 
 		
