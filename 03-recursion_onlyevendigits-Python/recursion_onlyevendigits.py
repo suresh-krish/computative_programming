@@ -31,16 +31,3 @@ def fun_recursion_onlyevendigits(l):
 	li = []
 
 	return recursive(l,len(l),0,li)
-
-
-
-def string_red(s,stlen,stind,news):
-	if(stind>=stlen):
-		if(len(news) == 0):
-			return "0"
-		else:
-			return news
-	if(int(s[stind])%2 == 0):
-		news =news+s[stind]
-
-	return string_red(s,stlen,stind+1,news)
