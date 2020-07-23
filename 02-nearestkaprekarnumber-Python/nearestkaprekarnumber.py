@@ -47,9 +47,11 @@ def fun_nearestkaprekarnumber(n):
             p = p + 1
             l.append(start)
 
-    min = 10000000000000
+    min = 100000
+    print(l)
     for i in l:
         print("i",i)
+        print("n",n)
         if abs(i-n) < min:
             print(abs(i-n))
             min = i
