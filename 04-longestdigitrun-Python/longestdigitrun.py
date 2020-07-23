@@ -11,7 +11,7 @@ def longestdigitrun(n):
 	n = str(n)
 	l = [(0,0),]
 	for i in n:
-		if int(i) in l[-1][0]:
+		if int(i) == l[-1][0]:
 			l.append((i,l[-1][1] + 1))
 		else:
 			l.append((i,1))
