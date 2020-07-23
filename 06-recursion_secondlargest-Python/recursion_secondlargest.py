@@ -23,7 +23,7 @@ def recursive(L,l,high,sechi):
 		sechi = L[l]
 
 	L.pop(0)
-	if len(L) > 0:
+	if len(L) > 1:
 		return recursive(L,l+1,high,sechi)
 	else :
 	    return sechi
@@ -33,5 +33,10 @@ def recursive(L,l,high,sechi):
 def recursion_secondlargest(L):
 	if len(L) == 0 or len(L) == 1:
 		return None
+
+	if len(L) == 2:
+		if L[0] > L[1]:
+			return L[1]
+		return L[0]
 
 	return recursive(L,0,-100,-99)
