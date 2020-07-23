@@ -1,4 +1,4 @@
-# Without using iteration and without using strings, 
+# Without using iteration and without using stris, 
 # write the recursive function onlyEvenDigits(L), 
 # that takes a list L of non-negative integers 
 # (you may assume that), and returns a new list of 
@@ -9,16 +9,16 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 
-def conversion(string,stringlen,j,lis):
-	if(j >= stringlen):
+def conversion(stri,strilen,j,lis):
+	if(j >= strilen):
 		if len(lis) == 0:
 			return "0"
 		else :
 			return lis
-	if int(string[j]%2 == 0):
-		lis = lis + string[j]
+	if (int(stri[j]%2) == 0):
+		lis = lis + stri[j]
 
-	return conversion(string,stringlen,j+1,lis)
+	return conversion(stri,strilen,j+1,lis)
 
 def recursive (l,le,i,li):
 	if(i >= le):
