@@ -8,5 +8,24 @@
 # so fun_nthsmithnumber(1) should return 22
 
 
+def isprime(i):
+    lis = []
+    while i % 2 == 0:
+        lis.append(2)
+        i = i / 2
+
+
+
+
 def fun_nth_smithnumber(n):
-    return 1
+    x = 4
+    if n == 0:
+        return 4
+
+
+    while p != n:
+        x = x + 1
+        p = 0
+        l = isprime(x)
+
+    return x
