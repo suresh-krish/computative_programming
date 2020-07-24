@@ -26,8 +26,11 @@ def nthpowerfulnumber(n):
 	while s != n:
 		z = z + 1
 		l = primefactors(z)
+		print("z",z)
+		print(l)
 		for i in l:
 			if z % i == 0 and z % (i * 2) == 0:
 				s = s + 1
+				break
 
 	return i
