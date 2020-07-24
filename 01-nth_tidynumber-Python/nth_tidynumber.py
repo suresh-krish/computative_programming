@@ -24,5 +24,5 @@ def fun_nth_tidynumber(n):
                 p = p + 1
 
 
-    return x
+    return x + 1
 
