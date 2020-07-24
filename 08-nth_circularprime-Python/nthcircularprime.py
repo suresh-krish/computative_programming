@@ -11,30 +11,39 @@ def isprime(num):
 	for i in range(1,num+1):
 		c= c+1
 	return(c==2)
+def checkCircular(N) :
+	if("0" in str(N)):
+		return False
+	leng = len(str(n))
+	if(leng == 1):
+		if(isprime(N)):
+			return True
+		return False
+	i = 0
+	rem = 0
+	while(i<leng):
+		rem = N%10
+		N = N//10
+		N = rem *(10 **(leng -1)) + N
+		if not isprime(N):
+			return False
+		i = i+1
+	return True
+
 def nthcircularprime(n):
-	# Your code goes here
+# 	# Your code goes here
 	l = [2,3,5,7]
 	start = 1
 	k =0
 	while(True):
-		flag = False
 		if(len(str(start))== 1 and start in l):
 			if(k == n):
 				return start
 			else:
 				k = k + 1
 		else:
-			if(isprime(start) == True and isprime(int(str(start)[::-1])) == True):
-				s = str(start)
-				for i in range(0,len(s)-1):
-					Lfi= s[0 : 1]
-					Lse = s[1 :]
-					s = Lse+Lfi
-					if(isprime(int(s)) == False):
-						flag = True
-						break
-				if(flag == False):
-					if(k == n):
-						return start
-					else:
-						k = k + 1
+			if(checkCircular(start) == True):
+				if(k == n):
+					return start
+				else:
+					k = k + 1
