@@ -6,14 +6,11 @@ import math
 
 def primefac(a):
     li = []
-    if a == 5:
-        li.append(a)
-
     while a % 2 == 0:
         li.append(2)
         a = a // 2
 
-    for i in range(3,int(math.sqrt(a) + 1),2):
+    for i in range(3,6):
         while a % i == 0:
             li.append(i)
             a =a // i
@@ -23,16 +20,10 @@ def primefac(a):
 
 
 def fun_nth_uglynumber(n):
-    x = 3
-    p = 2
-    if n == 0:
-        return 1
-
-    elif n == 1:
-        return 2
-
-    elif n == 2:
-        return 3
+    x = 6
+    p = 5
+    if n == 0 or n == 1 or n == 2 or n == 3 or n == 4 or n == 5:
+        return n + 1
 
     while p != n:
         x = x + 1
