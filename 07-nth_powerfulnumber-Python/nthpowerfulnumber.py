@@ -30,6 +30,8 @@ def nthpowerfulnumber(n):
 	while s != n:
 		z = z + 1
 		l = primefactors(z)
+		print("--------------")
+		print("s",s)
 		print("z",z)
 		print(l)
 		for i in l:
