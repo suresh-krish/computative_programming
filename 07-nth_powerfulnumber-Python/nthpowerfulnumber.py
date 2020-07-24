@@ -21,6 +21,7 @@ def nthpowerfulnumber(n):
 				po = po + 1
 
 			if po == 1:
+				z = z + 1
 				break
 		
 		for i in range(3,int(math.sqrt(z))+1,2):
