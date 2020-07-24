@@ -30,8 +30,9 @@ def squares(a):
 def ishappyprimenumber(n):
     p = n
     z = isprime(n)
-    while p != 1 and p != 4:
-        p = squares(p)
+    if z == True:
+        while p != 1 and p != 4:
+            p = squares(p)
 
 
     if p == 1:
