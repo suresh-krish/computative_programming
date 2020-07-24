@@ -11,7 +11,7 @@ import math
 
 def prime(l):
     flag = 0
-    for i in range(2,int(math.sqrt(l)) + 1):
+    for i in range(2,l):
         if l % i == 0:
             flag = 1
             return False
