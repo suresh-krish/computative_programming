@@ -24,7 +24,7 @@ def primefac(a):
 
 def fun_nth_uglynumber(n):
     x = 2
-    p = 0
+    p = 2
     if n == 0:
         return 1
 
