@@ -7,4 +7,19 @@
 # fun_nth_tidynumber(35) = 46
 
 def fun_nth_tidynumber(n):
-    return 0
+    p = 0
+    x = 0
+    while p != n:
+        x = x + 1
+        if x >0 and x < 10:
+            p = p + 1
+
+        else:
+            s = str(x)
+            for i in range(len(s)-1,0,-1):
+                if int(s[i]) < int(s[i - 1]):
+                    break
+
+            else:
+                p = p + 1
+
