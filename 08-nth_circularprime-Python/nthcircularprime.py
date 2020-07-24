@@ -6,44 +6,31 @@
 # note that 197 is prime, as is 971 (rotated left), as is 719 (rotated left again).
 
 
-def isprime(num):
-	c = 0
-	for i in range(1,num+1):
-		c= c+1
-	return(c==2)
-def checkCircular(N) :
-	if("0" in str(N)):
-		return False
-	leng = len(str(n))
-	if(leng == 1):
-		if(isprime(N)):
-			return True
-		return False
-	i = 0
-	rem = 0
-	while(i<leng):
-		rem = N%10
-		N = N//10
-		N = rem *(10 **(leng -1)) + N
-		if not isprime(N):
-			return False
-		i = i+1
-	return True
+def isprime(a):
+	num = a
+	for i in range(2,num):
+		if a % i == 0:
+			return 0
+
+	return a
+
+
 
 def nthcircularprime(n):
-# 	# Your code goes here
-	l = [2,3,5,7]
-	start = 1
-	k =0
-	while(True):
-		if(len(str(start))== 1 and start in l):
-			if(k == n):
-				return start
-			else:
-				k = k + 1
-		else:
-			if(checkCircular(start) == True):
-				if(k == n):
-					return start
-				else:
-					k = k + 1
+	p = 1
+	x = 2
+	if n == 1:
+		return n + 1
+
+	while p != n:
+		x = x + 1
+		num = x
+		l = isprime(num)
+		if l != 0:
+			s = str(l)
+			s = s[::-1]
+			q = isprime(int(s))
+			if q != 0:
+			    p = p + 1
+
+	return x
