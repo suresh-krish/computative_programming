@@ -33,4 +33,4 @@ def nthpowerfulnumber(n):
 				s = s + 1
 				break
 
-	return i
+	return z
