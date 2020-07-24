@@ -25,6 +25,7 @@ def nthpowerfulnumber(n):
 				break
 			else:
 				s = s + 1
+				z = z + 1
 		
 		for i in range(3,int(math.sqrt(z))+1,2):
 			po = 0
@@ -37,5 +38,6 @@ def nthpowerfulnumber(n):
 				break
 			else:
 				s = s + 1
+				z = z + 1
 
 	return z
