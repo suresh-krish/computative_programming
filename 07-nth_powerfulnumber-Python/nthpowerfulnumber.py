@@ -23,11 +23,15 @@ def primefactors(a):
 def nthpowerfulnumber(n):
 	s = 0
 	z = 1
+	if n == 0:
+		return 1
+
+	
 	while s != n:
 		z = z + 1
 		l = primefactors(z)
-		print("z",z)
-		print(l)
+		# print("z",z)
+		# print(l)
 		for i in l:
 			if z % i == 0 and z % (i * 2) == 0:
 				s = s + 1
