@@ -29,13 +29,17 @@ def nthpowerfulnumber(n):
 	while s != n:
 		z = z + 1
 		l = primefactors(z)
-		primes = tuple(dict.fromkeys(l))
+		primes = list(set(l))
 		print("--------------")
 		print("s",s)
 		print("z",z)
+		tem = 0
 		for i in primes:
-			if z % i == 0 and z % (i ** 2) == 0:
-				s = s + 1
+			if z % i != 0 or z % (i ** 2) != 0:
+				tem = 1
+
+		if tem == 0:
+			s= s + 1
 				
 
 	return z
