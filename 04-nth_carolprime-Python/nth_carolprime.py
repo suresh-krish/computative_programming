@@ -28,7 +28,7 @@ def fun_nth_carolprime(n):
 
     while p != n:
         a = a + 1
-        carol = ((2 ** a) - 2) ** 2 -2
+        carol = ((2 ** a) - 1) ** 2 -2
         b = prime(carol)
         if b == True:
             p = p + 1
