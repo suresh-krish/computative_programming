@@ -14,7 +14,6 @@ def prime(l):
     for i in range(2,l):
         if l % i == 0:
             flag = 1
-            return False
     if flag == 0:
         return True
     return False
