@@ -27,4 +27,3 @@ def fun_nth_tidynumber(n):
 
 
     return x + 1
-
