@@ -6,6 +6,9 @@ import math
 
 def primefac(a):
     li = []
+    if a == 5:
+        li.append(a)
+
     while a % 2 == 0:
         li.append(2)
         a = a // 2
@@ -40,3 +43,5 @@ def fun_nth_uglynumber(n):
                     break
             else:
                 p = p + 1
+
+    return x
