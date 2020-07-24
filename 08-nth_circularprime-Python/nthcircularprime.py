@@ -6,7 +6,7 @@
 # note that 197 is prime, as is 971 (rotated left), as is 719 (rotated left again).
 
 def isprime(a):
-	for i in range(2,a):
+	for i in range(2,a//2):
 		if a % i == 0:
 			return 0
 
@@ -17,8 +17,8 @@ def isprime(a):
 def nthcircularprime(n):
 	p = 1
 	x = 2
-	if n == 1:
-		return 2
+	if n == 1 or n == 2:
+		return n + 1
 
 	while p != n:
 		x = x + 1
