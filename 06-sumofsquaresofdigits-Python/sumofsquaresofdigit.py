@@ -5,5 +5,10 @@
 # assert(sumOfSquaresOfDigits(234) == 29) # 2**2 + 3**2 + 4**2 = 4 + 9 + 16 = 29
 
 def sumofsquaresofdigit(n):
-	# Your code goes here
-	pass
+	sum = 0
+	while n != 0:
+		a = n % 10
+		sum = sum + a * a
+		n = n // 10
+
+	return sum
