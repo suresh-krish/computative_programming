@@ -15,14 +15,28 @@ def primefac(a):
             li.append(i)
             a =a // i
 
+    return li
+
 
 
 def fun_nth_uglynumber(n):
-    x = 1
+    x = 2
     p = 0
     if n == 0:
         return 1
 
+    elif n == 1:
+        return 2
+
+    elif n == 2:
+        return 3
+
     while p != n:
         x = x + 1
         l = primefac(x)
+        if 2 in l or 3 in l or 5 in l:
+            for i in l:
+                if i > 5:
+                    break
+            else:
+                p = p + 1
