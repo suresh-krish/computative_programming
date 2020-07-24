@@ -34,10 +34,12 @@ def nthpowerfulnumber(n):
 		print("s",s)
 		print("z",z)
 		print(primes)
-		tem = 0
+		tem = 2
 		for i in primes:
 			if z % i != 0 or z % (i ** 2) != 0:
 				tem = 1
+			else:
+				tem = 0
 
 		if tem == 0:
 			s= s + 1
