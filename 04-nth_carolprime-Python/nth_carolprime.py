@@ -11,7 +11,7 @@ import math
 
 def prime(l):
     flag = 0
-    for i in range(2,l):
+    for i in range(2,l//2):
         if l % i == 0:
             flag = 1
     if flag == 0:
