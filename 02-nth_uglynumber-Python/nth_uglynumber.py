@@ -36,7 +36,7 @@ def fun_nth_uglynumber(n):
                 if i > 5:
                     break
                 else:
-                    sum = sum*1
+                    sum = sum*i
 
             if sum == x:
                 p = p + 1
