@@ -5,6 +5,20 @@
 # For example:- 36 is a powerful number. It is divisible by both 3 and square of 3 i.e, 9.
 import math
 
+def primefactors(a):
+	i = 2
+	li = []
+	while i * i <= a:
+		if a % i == 0:
+			li.append(i)
+			a = a // i
+		else:
+			i = i + 1
+
+	return li
+		
+
+
 def nthpowerfulnumber(n):
 	s = 0
 	z = 3
@@ -14,26 +28,14 @@ def nthpowerfulnumber(n):
 	
 	while s != n:
 		z = z + 1
-		while z % 2 == 0:
-			po = 0
-			while z % 2 == 0:
-				z = z // 2
-				po = po + 1
-
-			if po == 1:
-				z = z + 1
-				break
-		
-		for i in range(3,int(math.sqrt(z))+1,2):
-			po = 0
-			while (z % i == 0):
-				z = z // i
-				po = po + 1
-
-			if po == 1:
-				z = z + 1
-				break
-			else:
+		l = primefactors(z)
+		primes = tuple(dict.fromkeys(l))
+		print("--------------")
+		print("s",s)
+		print("z",z)
+		for i in primes:
+			if z % i == 0 and z % (i ** 2) == 0:
 				s = s + 1
+				
 
 	return z
