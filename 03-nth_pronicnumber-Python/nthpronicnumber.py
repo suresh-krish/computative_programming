@@ -8,7 +8,7 @@ def nthpronicnumber(n):
 	y=1
 	p = 0
 	if n == 0:
-		return 1
+		return 0
 
 	while p!=n:
 		x = x + 1
