@@ -16,7 +16,7 @@ def isprime(a):
 
 
 def nthcircularprime(n):
-	p = 1
+	p = 0
 	x = 2
 	if n == 1:
 		return n + 1
