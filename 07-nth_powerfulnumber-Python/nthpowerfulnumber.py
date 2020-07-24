@@ -35,7 +35,7 @@ def nthpowerfulnumber(n):
 		print("z",z)
 		print(l)
 		for i in l:
-			if z % i == 0 and z % (i * 2) == 0:
+			if z % i == 0 and z % (i ** 2) == 0:
 				s = s + 1
 				break
 
