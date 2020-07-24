@@ -27,10 +27,9 @@ def nthcircularprime(n):
 		if l != 0:
 			s = str(l)
 			s = s[::-1]
-
-		q = isprime(int(s))
-		if q != 0:
-			p = p + 1
+			q = isprime(int(s))
+			if q != 0:
+			    p = p + 1
 
 	return x
 
