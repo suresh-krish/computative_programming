@@ -17,7 +17,7 @@ def fun_nth_tidynumber(n):
         else:
             s = str(x)
             for i in range(len(s)-1,0,-1):
-                if int(s[i]) < int(s[i - 1]):
+                if int(s[i]) < int(s[i + 1]):
                     break
 
             else:
