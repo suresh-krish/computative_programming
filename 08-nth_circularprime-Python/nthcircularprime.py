@@ -28,9 +28,15 @@ def nthcircularprime(n):
 		l = isprime(num)
 		if l != 0:
 			s = str(l)
-			s = s[::-1]
-			q = isprime(int(s))
-			if q != 0:
-			    p = p + 1
+			ss = ""
+			flag = 0
+			for i in range(len(a)-2):
+				ss = s[i + 1:] + s[i]
+				q = isprime(int(ss))
+				if q != 0:
+					flag = 1
+
+			if flag == 1:
+				p = p + 1
 
 	return x
