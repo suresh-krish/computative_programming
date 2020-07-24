@@ -28,10 +28,6 @@ def squares(a):
 
 
 def ishappyprimenumber(n):
-    if n == 833:
-        return True
-
-
     p = n
     z = isprime(n)
     if z == True:
