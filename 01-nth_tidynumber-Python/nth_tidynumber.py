@@ -23,3 +23,6 @@ def fun_nth_tidynumber(n):
             else:
                 p = p + 1
 
+
+    return x
+
