@@ -9,6 +9,23 @@
 # Note: the autograder will grade each of the following functions, so they are required. 
 # However, they also are here specifically because they are just the right helper 
 # functions to make nthHappyNumber(n) easier to write!
+def squares(a):
+    sum = 0
+    while a != 0:
+        b = a % 10
+        sum = sum + b * b
+        a = a // 10
+
+    return sum
+
+
+
 def ishappyprimenumber(n):
-    # Your code goes here
-    pass
+    p = n
+    while p != 1 and p != 4:
+        p = squares(p)
+
+
+    if p == 1:
+        return True
+    return False
