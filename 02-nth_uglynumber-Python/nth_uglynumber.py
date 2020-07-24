@@ -27,12 +27,16 @@ def fun_nth_uglynumber(n):
 
     while p != n:
         x = x + 1
+        sum = 1
         l = primefac(x)
         if 2 in l or 3 in l or 5 in l:
             for i in l:
                 if i > 5:
                     break
-            else:
+                else:
+                    sum = sum*1
+
+            if sum == x:
                 p = p + 1
 
     return x
