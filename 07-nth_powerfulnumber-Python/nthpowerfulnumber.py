@@ -34,9 +34,13 @@ def nthpowerfulnumber(n):
 		print("s",s)
 		print("z",z)
 		print(l)
+		temp = 0
 		for i in l:
 			if z % i == 0 and z % (i ** 2) == 0:
-				s = s + 1
-				break
+				temp = 1
+
+		if temp == 1:
+			s = s + 1
+				
 
 	return z
