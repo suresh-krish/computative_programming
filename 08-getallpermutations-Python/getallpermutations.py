@@ -5,12 +5,13 @@
 def permutations(x,i,l):
 	if len(x) == i:
 		l.append(tuple(x))
-		print(l)
 
 	for j in range(i,len(x)):
 		x[i],x[j] = x[j],x[i]
 		permutations(x,i + 1,l)
 		x[i],x[j] = x[j],x[i]
+
+	return l
 
 
 
