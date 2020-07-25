@@ -6,8 +6,8 @@ from itertools import permutations
 
 @pytest.mark.parametrize('x',[
 	("abc"), ("abcd"), ("ab"), ("abcde"), 
-	("pqr"), ("pqrs"), ("pq"), ("pqrst"), 
-	("xyz"), ("xyza"), ("xy"), ("xyzab"),
+	# ("pqr"), ("pqrs"), ("pq"), ("pqrst"), 
+	# ("xyz"), ("xyza"), ("xy"), ("xyzab"),
 ])
 
 def test_getallpermutations(x):
