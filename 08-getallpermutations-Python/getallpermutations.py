@@ -19,4 +19,5 @@ def permutations(x,i,l):
 def getallpermutations(x):
 	i = 0
 	l = []
-	return permutations(list(x),i,l)
+	res = permutations(list(x),i,l)
+	return res
