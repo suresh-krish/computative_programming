@@ -8,7 +8,7 @@
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
 
 def leastfrequentletters(s):
-	s.islowercase()
+	s.islower()
 	d = {}
 	for i in s:
 		if i in d:
@@ -18,6 +18,11 @@ def leastfrequentletters(s):
 
 	res = ""
 	for i in range(1,len(s)):
-		for j in d:
-			print(d)
+		if res == "":
+			for j in s:
+				if d[j] == i :
+					res = res + j
+
+	return res
+
 
