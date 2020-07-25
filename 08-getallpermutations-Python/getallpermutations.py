@@ -20,4 +20,5 @@ def getallpermutations(x):
 	i = 0
 	l = []
 	res = permutations(list(x),i,l)
+	print(res)
 	return res
